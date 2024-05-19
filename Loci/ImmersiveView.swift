@@ -11,7 +11,6 @@ import RealityKitContent
 
 struct ImmersiveView: View {
     var body: some View {
-        
         RealityView { content in
             // Add the initial RealityKit content
             if let immersiveContentEntity = try? await Entity(named: "amongus", in: realityKitContentBundle) {
@@ -21,7 +20,7 @@ struct ImmersiveView: View {
                 immersiveContentEntity.orientation = simd_quatf(angle: .pi, axis: [0, 1, 0]) // Rotate 180 degrees around the Y axis
                 
                 content.add(immersiveContentEntity)
-
+                immersiveContentEntity.position = [0, 1, 0]
                 // Add an ImageBasedLight for the immersive content
                 guard let resource = try? await EnvironmentResource(named: "ImageBasedLight") else { return }
                 let iblComponent = ImageBasedLightComponent(source: .single(resource), intensityExponent: 0.25)
