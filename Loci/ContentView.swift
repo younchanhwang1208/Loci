@@ -1,31 +1,36 @@
-//
-//  ContentView.swift
-//  Loci
-//
-//  Created by Youn Hwang on 5/6/24.
-//
-
+// ContentView.swift
 import SwiftUI
 import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-
     @State private var showImmersiveSpace = false
     @State private var immersiveSpaceIsShown = false
-
+    
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
-
+    
     var body: some View {
-        VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
+        NavigationStack {
+            VStack {
+                Model3D(named: "Scene", bundle: realityKitContentBundle)
+                    .padding(.bottom, 50)
 
-            Text("Welcome to Loci: Memory Palace!").font(.largeTitle)
-            Toggle("Show Immersive Space", isOn: $showImmersiveSpace)
-                .toggleStyle(.button)
-                .padding(.top, 50)
+                Text("Welcome to Loci: Memory Palace!").font(.largeTitle)
+                
+                NavigationLink(destination: MapNav()) {
+                    Text("Maps")
+                        .font(.title)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                
+                Toggle("Show Immersive Space", isOn: $showImmersiveSpace)
+                    .toggleStyle(.button)
+                    .padding(.top, 50)
+            }
         }
         .onChange(of: showImmersiveSpace) { _, newValue in
             Task {
@@ -45,11 +50,8 @@ struct ContentView: View {
                 }
             }
         }
-        
     }
 }
-
-
 
 #Preview(windowStyle: .automatic) {
     ContentView()
