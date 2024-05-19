@@ -12,7 +12,7 @@ import RealityKitContent
 struct ImmersiveView: View {
     var body: some View {
         //have to reposition them (it is currently below the ground)
-        Model3D(named: "room") { model in
+        Model3D(named: "amongus") { model in
             model
             //.resizable()
             .aspectRatio(contentMode: .fill)
@@ -21,7 +21,7 @@ struct ImmersiveView: View {
         }
         RealityView { content in
             // Add the initial RealityKit content
-            if let immersiveContentEntity = try? await Entity(named: "Immersive", in: realityKitContentBundle) {
+            if let immersiveContentEntity = try? await Entity(named: "amongus", in: realityKitContentBundle) {
                 content.add(immersiveContentEntity)
 
                 // Add an ImageBasedLight for the immersive content
