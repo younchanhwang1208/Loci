@@ -23,12 +23,10 @@ struct ContentView: View {
                 .padding(.bottom, 50)
 
             Text("Welcome to Loci: Memory Palace!").font(.largeTitle)
-
             Toggle("Show Immersive Space", isOn: $showImmersiveSpace)
                 .toggleStyle(.button)
                 .padding(.top, 50)
         }
-        .padding()
         .onChange(of: showImmersiveSpace) { _, newValue in
             Task {
                 if newValue {
@@ -47,8 +45,11 @@ struct ContentView: View {
                 }
             }
         }
+        
     }
 }
+
+
 
 #Preview(windowStyle: .automatic) {
     ContentView()
