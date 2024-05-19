@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -81,6 +81,13 @@
 			path = resources;
 			sourceTree = "<group>";
 		};
+		3D66FC1E2BF9CC9900A705A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3DCF448F2BE9C21A0056065B = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +95,7 @@
 				3DCF449B2BE9C21A0056065B /* Packages */,
 				3DCF44B42BE9C21C0056065B /* LociTests */,
 				3DCF44992BE9C21A0056065B /* Products */,
+				3D66FC1E2BF9CC9900A705A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,6 +217,9 @@
 				Base,
 			);
 			mainGroup = 3DCF448F2BE9C21A0056065B;
+			packageReferences = (
+				3D66FC1D2BF9CC8C00A705A0 /* XCLocalSwiftPackageReference "Packages/RealityKitContent" */,
+			);
 			productRefGroup = 3DCF44992BE9C21A0056065B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -514,6 +525,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		3D66FC1D2BF9CC8C00A705A0 /* XCLocalSwiftPackageReference "Packages/RealityKitContent" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/RealityKitContent;
+		};
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		3DCF449D2BE9C21A0056065B /* RealityKitContent */ = {
