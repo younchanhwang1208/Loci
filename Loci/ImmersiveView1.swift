@@ -31,6 +31,7 @@ struct ImmersiveView1: View {
                 // Put skybox here.  See example in World project available at
                 // https://developer.apple.com/
             }
+        
         }
     }
 }
