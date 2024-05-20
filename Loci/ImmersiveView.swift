@@ -20,7 +20,6 @@ struct ImmersiveView: View {
                 immersiveContentEntity.orientation = simd_quatf(angle: .pi, axis: [0, 1, 0]) // Rotate 180 degrees around the Y axis
                 
                 content.add(immersiveContentEntity)
-                immersiveContentEntity.position = [0, 1, 0]
                 // Add an ImageBasedLight for the immersive content
                 guard let resource = try? await EnvironmentResource(named: "ImageBasedLight") else { return }
                 let iblComponent = ImageBasedLightComponent(source: .single(resource), intensityExponent: 0.25)
@@ -29,6 +28,22 @@ struct ImmersiveView: View {
 
                 // Put skybox here.  See example in World project available at
                 // https://developer.apple.com/
+            }
+            if let plane = try? await Entity(named: "plane" /*in: realityKitContentBundle*/) {
+                plane.position = [25, -5, -50] // Shifted right and forward
+                content.add(plane)
+            }
+            if let tea = try? await Entity(named: "tea" /*in: realityKitContentBundle*/) {
+                tea.position = [25, -5, -50] // Shifted right and forward
+                content.add(tea)
+            }
+            if let doll = try? await Entity(named: "doll" /*in: realityKitContentBundle*/) {
+                doll.position = [25, -5, -50] // Shifted right and forward
+                content.add(doll)
+            }
+            if let banana = try? await Entity(named: "banana" /*in: realityKitContentBundle*/) {
+                banana.position = [25, -5, -50] // Shifted right and forward
+                content.add(banana)
             }
         }
     }
