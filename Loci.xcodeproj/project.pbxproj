@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		3D66FC0E2BF9864B00A705A0 /* desertcity.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3D66FC0D2BF9864B00A705A0 /* desertcity.usdz */; };
 		3D66FC162BF98BCC00A705A0 /* map.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3D66FC152BF98BCC00A705A0 /* map.usdz */; };
-		3D8A0F062BF97F9500BDF5A6 /* tea.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3D8A0F052BF97F9500BDF5A6 /* tea.usdz */; };
-		3DA47AB92BFB36B60061B59B /* banana.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3DA47AB82BFB36B60061B59B /* banana.usdz */; };
-		3DA47ABB2BFB36BB0061B59B /* plane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3DA47ABA2BFB36BA0061B59B /* plane.usdz */; };
-		3DA47ABD2BFB36BE0061B59B /* doll.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3DA47ABC2BFB36BE0061B59B /* doll.usdz */; };
 		3DCF449E2BE9C21A0056065B /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 3DCF449D2BE9C21A0056065B /* RealityKitContent */; };
 		3DCF44A02BE9C21A0056065B /* LociApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCF449F2BE9C21A0056065B /* LociApp.swift */; };
 		3DCF44A22BE9C21A0056065B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCF44A12BE9C21A0056065B /* ContentView.swift */; };
@@ -23,6 +19,8 @@
 		3DCF44B62BE9C21C0056065B /* LociTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCF44B52BE9C21C0056065B /* LociTests.swift */; };
 		534CD6182BF9D73500FCF16B /* MapNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534CD6172BF9D73500FCF16B /* MapNav.swift */; };
 		534CD61A2BF9D99800FCF16B /* ImmersiveView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534CD6192BF9D99800FCF16B /* ImmersiveView1.swift */; };
+		534CD61E2BFC184D00FCF16B /* PlaceObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534CD61D2BFC184C00FCF16B /* PlaceObjects.swift */; };
+		534CD6222BFC252800FCF16B /* ss.png in Resources */ = {isa = PBXBuildFile; fileRef = 534CD6212BFC252800FCF16B /* ss.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +36,6 @@
 /* Begin PBXFileReference section */
 		3D66FC0D2BF9864B00A705A0 /* desertcity.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = desertcity.usdz; sourceTree = "<group>"; };
 		3D66FC152BF98BCC00A705A0 /* map.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = map.usdz; sourceTree = "<group>"; };
-		3D8A0F052BF97F9500BDF5A6 /* tea.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = tea.usdz; sourceTree = "<group>"; };
-		3DA47AB82BFB36B60061B59B /* banana.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = banana.usdz; sourceTree = "<group>"; };
-		3DA47ABA2BFB36BA0061B59B /* plane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = plane.usdz; sourceTree = "<group>"; };
-		3DA47ABC2BFB36BE0061B59B /* doll.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = doll.usdz; sourceTree = "<group>"; };
 		3DCF44982BE9C21A0056065B /* Loci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loci.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DCF449C2BE9C21A0056065B /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		3DCF449F2BE9C21A0056065B /* LociApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LociApp.swift; sourceTree = "<group>"; };
@@ -55,6 +49,9 @@
 		3DCF44B52BE9C21C0056065B /* LociTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LociTests.swift; sourceTree = "<group>"; };
 		534CD6172BF9D73500FCF16B /* MapNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNav.swift; sourceTree = "<group>"; };
 		534CD6192BF9D99800FCF16B /* ImmersiveView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView1.swift; sourceTree = "<group>"; };
+		534CD61D2BFC184C00FCF16B /* PlaceObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceObjects.swift; sourceTree = "<group>"; };
+		534CD6202BFC200E00FCF16B /* amongus_minimap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = amongus_minimap.jpg; path = ../../../Downloads/amongus_minimap.jpg; sourceTree = "<group>"; };
+		534CD6212BFC252800FCF16B /* ss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +78,6 @@
 			children = (
 				3D66FC0D2BF9864B00A705A0 /* desertcity.usdz */,
 				3D66FC152BF98BCC00A705A0 /* map.usdz */,
-				3D8A0F052BF97F9500BDF5A6 /* tea.usdz */,
-				3DA47ABA2BFB36BA0061B59B /* plane.usdz */,
-				3DA47ABC2BFB36BE0061B59B /* doll.usdz */,
-				3DA47AB82BFB36B60061B59B /* banana.usdz */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -121,7 +114,10 @@
 			children = (
 				3D66FC0C2BF985DA00A705A0 /* resources */,
 				3DCF449F2BE9C21A0056065B /* LociApp.swift */,
+				534CD61D2BFC184C00FCF16B /* PlaceObjects.swift */,
 				534CD6172BF9D73500FCF16B /* MapNav.swift */,
+				534CD6212BFC252800FCF16B /* ss.png */,
+				534CD6202BFC200E00FCF16B /* amongus_minimap.jpg */,
 				3DCF44A12BE9C21A0056065B /* ContentView.swift */,
 				3DCF44A32BE9C21A0056065B /* ImmersiveView.swift */,
 				534CD6192BF9D99800FCF16B /* ImmersiveView1.swift */,
@@ -245,14 +241,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DCF44A82BE9C21C0056065B /* Assets.xcassets in Resources */,
-				3DA47ABB2BFB36BB0061B59B /* plane.usdz in Resources */,
+				534CD6222BFC252800FCF16B /* ss.png in Resources */,
 				3DCF44AB2BE9C21C0056065B /* Preview Assets.xcassets in Resources */,
-				3DA47ABD2BFB36BE0061B59B /* doll.usdz in Resources */,
 				3D66FC0E2BF9864B00A705A0 /* desertcity.usdz in Resources */,
 				3DCF44A62BE9C21A0056065B /* ImageBasedLighting.skybox in Resources */,
-				3DA47AB92BFB36B60061B59B /* banana.usdz in Resources */,
 				3D66FC162BF98BCC00A705A0 /* map.usdz in Resources */,
-				3D8A0F062BF97F9500BDF5A6 /* tea.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +265,7 @@
 			files = (
 				534CD6182BF9D73500FCF16B /* MapNav.swift in Sources */,
 				534CD61A2BF9D99800FCF16B /* ImmersiveView1.swift in Sources */,
+				534CD61E2BFC184D00FCF16B /* PlaceObjects.swift in Sources */,
 				3DCF44A22BE9C21A0056065B /* ContentView.swift in Sources */,
 				3DCF44A02BE9C21A0056065B /* LociApp.swift in Sources */,
 				3DCF44A42BE9C21A0056065B /* ImmersiveView.swift in Sources */,
