@@ -5,6 +5,8 @@
 //  Created by Shane Mion on 5/20/24.
 //
 import SwiftUI
+import RealityKit
+import RealityKitContent
 
 struct PlaceObjects: View {
     var spaceTitle: String
@@ -15,7 +17,7 @@ struct PlaceObjects: View {
             Image(imageName)
                 .resizable()
                 .scaledToFit()
-                .frame(maxWidth: 300, maxHeight: 300)
+//                .frame(maxWidth: 900, maxHeight: 450)
                 .padding()
             Text("Showing \(spaceTitle)")
                 .font(.title)
