@@ -16,7 +16,7 @@ struct ImmersiveView1: View {
             // Add the initial RealityKit content
             if let immersiveContentEntity = try? await Entity(named: "room", in: realityKitContentBundle) {
                 
-                immersiveContentEntity.position = [0, -1, 0] // Shifted right and forward
+                immersiveContentEntity.position = [0, 0, 0] // Shifted right and forward
                //immersiveContentEntity.scale = [0.1, 0.3, 0.3] // Scaled down by a factor of 0.5
 //                immersiveContentEntity.orientation = simd_quatf(angle: .pi, axis: [0, 1, 0]) // Rotate 180 degrees around the Y axis
                 
