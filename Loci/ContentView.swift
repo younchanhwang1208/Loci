@@ -1,14 +1,8 @@
-// ContentView.swift
 import SwiftUI
 import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-    
-    
-    @Environment(\.openImmersiveSpace) var openImmersiveSpace
-    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
-    
     var body: some View {
         NavigationStack {
             VStack {
@@ -16,17 +10,15 @@ struct ContentView: View {
                     .padding(.bottom, 50)
 
                 Text("Welcome to Loci: Memory Palace!").font(.largeTitle)
-                
-                NavigationLink(destination: MapNav()) {
-                    Text("Maps")
+
+                NavigationLink(destination: MixedVsFull()) {
+                    Text("Choose Mode")
                         .font(.title)
                         .padding()
-//                        .background(Color.blue)
-//                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .foregroundColor(.white)
                         .cornerRadius(10)
                 }
-                
-                
             }
         }
     }

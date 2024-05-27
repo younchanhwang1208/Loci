@@ -11,6 +11,18 @@
       }
     ]
   },
+  "1E0788FF-5E23-494B-BF03-1218EBF19B2B" : {
+    "objectMetadataList" : [
+      [
+        "1E0788FF-5E23-494B-BF03-1218EBF19B2B",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
   "65F6F990-A780-4474-B78B-572E0E4E273D" : {
     "objectMetadataList" : [
       [
@@ -35,17 +47,20 @@
       }
     ]
   },
-  "AF09ED6F-1707-48FD-8720-65B998362C09" : {
+  "A77E8D0C-3D8F-490E-AA8C-7C57C5CCCC4A" : {
     "objectMetadataList" : [
       [
-        "AF09ED6F-1707-48FD-8720-65B998362C09",
-        "Root",
-        "Sphere_Right"
+        "A77E8D0C-3D8F-490E-AA8C-7C57C5CCCC4A",
+        "Root"
       ],
       {
         "isExpanded" : true,
         "isLocked" : false
-      },
+      }
+    ]
+  },
+  "AF09ED6F-1707-48FD-8720-65B998362C09" : {
+    "objectMetadataList" : [
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root",
@@ -58,6 +73,15 @@
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root",
+        "Sphere_Right"
       ],
       {
         "isExpanded" : true,
@@ -86,6 +110,18 @@
       }
     ]
   },
+  "CD11C75A-51EC-49FE-9A95-B92389BD0ABF" : {
+    "objectMetadataList" : [
+      [
+        "CD11C75A-51EC-49FE-9A95-B92389BD0ABF",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
   "D560BB77-AAF3-4BDE-B7C4-989332A4688B" : {
     "objectMetadataList" : [
 
@@ -95,7 +131,9 @@
     "objectMetadataList" : [
       [
         "D66134B1-3681-4A8E-AFE5-29F257229F3B",
-        "Root"
+        "Root",
+        "GridMaterial",
+        "GridMaterial"
       ],
       {
         "isExpanded" : true,
@@ -103,9 +141,7 @@
       },
       [
         "D66134B1-3681-4A8E-AFE5-29F257229F3B",
-        "Root",
-        "GridMaterial",
-        "GridMaterial"
+        "Root"
       ],
       {
         "isExpanded" : true,
