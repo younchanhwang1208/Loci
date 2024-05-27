@@ -1,0 +1,656 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (409.100.15)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["amongus", "hooptest", "hooptest_1", "hooptest_2", "hooptest_3", "hooptest_4", "hooptest_5", "hooptest_6", "hooptest_7", "hooptest_8", "hooptest_9", "hooptest_10", "hooptest_11", "hooptest_12", "hooptest_13", "hooptest_14", "hooptest_15", "hooptest_16", "hooptest_17", "hooptest_18", "hooptest_19", "hooptest_20", "hooptest_21", "hooptest_22", "hooptest_23", "hooptest_24", "hooptest_25", "hooptest_26", "hooptest_27", "hooptest_28", "hooptest_29", "hooptest_30", "hooptest_31", "hooptest_32", "hooptest_33", "hooptest_34", "hooptest_35", "hooptest_36", "hooptest_37", "hooptest_38", "hooptest_39", "hooptest_40", "hooptest_41", "hooptest_42"]
+    def "amongus" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        references = @amongus.usdz@
+    )
+    {
+        rel material:binding = None (
+            bindMaterialAs = "strongerThanDescendants"
+        )
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (844.26, 17.80874, 495.20746)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000015258789, -9.185837, 0.000022888184)
+                }
+            }
+        }
+    }
+
+    def "hooptest" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (0.24308874, 1.8626451e-9, 0.15919769)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "hooptest_1" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (1.5019065, -2.2351742e-8, -1.2859592)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "hooptest_2" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (0.25663543, -2.2351742e-8, -0.40678132)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_2/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_3" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (0.25663543, -2.2351742e-8, -0.90745544)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_3/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_4" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-0.23853207, -2.2351742e-8, -1.2097675)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_4/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_5" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-0.8144684, -2.2351742e-8, -1.2599537)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_5/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_6" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-1.3091519, -2.2351742e-8, -1.2599537)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_6/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_7" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-1.3091519, -2.2351742e-8, -0.8652251)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_7/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_8" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-1.3091519, -2.2351742e-8, -0.53097415)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_8/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_9" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-1.4043432, -2.2351742e-8, -0.13390577)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_9/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_10" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-1.0919896, -2.2351742e-8, -0.2680055)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_10/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_11" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-1.7372662, -2.2351742e-8, -1.2599537)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_11/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_12" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-2.1224737, -2.2351742e-8, -1.2599537)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_12/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_13" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-2.447691, -2.2351742e-8, -1.2599537)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_13/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_14" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-2.447691, -2.2351742e-8, -1.4787298)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_14/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_15" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-2.447691, -2.2351742e-8, -0.82373536)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_15/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_16" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-2.7818372, -2.2351742e-8, -0.82373536)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_16/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_17" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-3.077929, -2.2351742e-8, -0.82373536)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_17/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_18" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-2.447691, -2.2351742e-8, -1.6135664)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_18/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_19" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-3.200345, -2.2351742e-8, -0.82508546)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_19/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_20" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-2.7694592, -2.2351742e-8, -0.49446785)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_20/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_21" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-2.7694592, -2.2351742e-8, -0.07343349)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_21/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_22" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-2.4648607, -2.2351742e-8, -0.07343349)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_22/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_23" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-2.1511638, -2.2351742e-8, -0.07343349)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_23/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_24" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-2.1511638, -2.2351742e-8, -0.3375002)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_24/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_25" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-1.9190533, -2.2351742e-8, -0.3375002)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_25/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_26" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-1.9190533, -2.2351742e-8, -0.51275307)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_26/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_28" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-2.0732045, -2.2351742e-8, 0.22031385)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_28/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+    }
+
+    def "hooptest_27" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-2.0732045, -2.2351742e-8, -0.51275307)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_27/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+
+            over "Meshes"
+            {
+                over "Sketchfab_model"
+                {
+                    over "b1740544136c46d9b1ec9c99d39dd704_fbx"
+                    {
+                        over "RootNode"
+                        {
+                            over "iayseozdemir_hoop_piercing"
+                            {
+                                over "iayseozdemir_hoop_piercing_iayseozdemir_hoop_piercing_0"
+                                {
+                                    over "iayseozdemir_hoop_piercing_iayseozdemir_hoop_piercing_0"
+                                    {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
