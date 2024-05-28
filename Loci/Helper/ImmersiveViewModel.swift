@@ -17,7 +17,7 @@ import RealityKitContent
             let collisionComponent = CollisionComponent(shapes: [ShapeResource.generateBox(width: 0.5 / 9, height: 0.2 / 9, depth: 0.5/9)])
             hoop.components.set(collisionComponent)
             hoop.components.set(InputTargetComponent())
-            print("Added collision and input target components to hoop: \(hoop.name)")
+//            print("Added collision and input target components to hoop: \(hoop.name)")
         }
 //    }
     
@@ -36,25 +36,24 @@ import RealityKitContent
     
     private func moveEntitiesRelativeToHoop(hoop: Entity, in map: Entity) {
         let hoopPosition = hoop.position(relativeTo: nil)
-//        let offset = SIMD3<Float>(-hoopPosition.x, -hoopPosition.y, -hoopPosition.z)
-        let offset = SIMD3<Float>(-hoopPosition.x / 9, 0, -hoopPosition.z / 9)
+        let offset = SIMD3<Float>(-hoopPosition.x, 0, -hoopPosition.z)
 
         print("Moving entities by offset: \(offset)")
         
+        
         for child in map.children {
             let currentPosition = child.position(relativeTo: nil)
+            print("Before move: entity \(child.name) is at position: \(currentPosition)")
+
             let newPosition = currentPosition + offset
-            child.setPosition(newPosition, relativeTo: nil)
-            // buggy move line
-//            child.move(to: Transform(translation: newPosition), relativeTo: map, duration: 1.0)
+//            child.setPosition(newPosition, relativeTo: nil) // sharp teleportations
+            let transform = Transform(
+                scale: SIMD3<Float>(10, 10, 10),
+                translation: newPosition
+            )
+            child.move(to: transform, relativeTo: nil, duration: 1.0)
 
             print("Moved entity \(child.name) to new position: \(newPosition)")
         }
-        
-        let mapCurrentPosition = map.position(relativeTo: nil)
-        let mapNewPosition = mapCurrentPosition + offset
-        map.setPosition(mapNewPosition, relativeTo: nil)
-//        map.move(to: Transform(translation: mapNewPosition), relativeTo: camEntity, duration: 1.0)
-        print("Moved map to new position: \(mapNewPosition)")
     }
 }

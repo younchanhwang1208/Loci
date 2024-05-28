@@ -10,14 +10,9 @@ struct ImmersiveView: View {
             // Load the initial RealityKit content from the USDA file
             if let map = try? await Entity(named: "Whatever", in: realityKitContentBundle) {
                 // Adjusted position, scale, and orientation
-                map.position = [2, 0, 0]
-                map.scale = [9, 9, 9]
-                map.orientation = simd_quatf(angle: .pi, axis: [0, 1, 0]) // Rotate 180 degrees
-                
+                map.position = [-2, 0, 9]
+                map.scale = [10, 10, 10]
                 content.add(map)
-                
-                // set the scaleFactor in the model to adjust the offsets
-//                model.scaleFactor = map.scale
 
                 
                 // Add an ImageBasedLight for the immersive content
@@ -31,7 +26,7 @@ struct ImmersiveView: View {
                 for i in 0...16 {
                     let hoopName = "hooptest_\(i)"
                     if let hoop = map.findEntity(named: hoopName) {
-                        print("Setting up tap gesture for hoop: \(hoopName)")
+//                        print("Setting up tap gesture for hoop: \(hoopName)")
                         model.setupTapGesture(for: hoop)
                         print("Set up tap gesture for hoop: \(hoopName)")
                     } else {
@@ -39,9 +34,8 @@ struct ImmersiveView: View {
                     }
                 }
                 
-                // Store the initial map entity and its scale factor in the model
+                // Store the initial map entity in the model ("Whatever" in reality kit)
                 model.initialMap = map
-//                model.scaleFactor = map.scale
             } else {
                 print("Could not load initial RealityKit content")
             }
