@@ -30,6 +30,7 @@ struct Step2View: View {
 
                     Color.clear
                         .overlay {
+                            // See HoopModel component comments
                             HoopModel(orientation: [-0.3,0.4,0])
                                 .dragRotation(yawLimit: .degrees(45), pitchLimit: .degrees(45))
                                 .frame(height: 100)
