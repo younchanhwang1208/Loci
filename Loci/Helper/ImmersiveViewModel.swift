@@ -4,13 +4,10 @@ import SwiftUI
 import RealityKitContent
 
 @MainActor class ImmersiveViewModel: ObservableObject {
+    // create an initialMap variable for relative positions"
     var initialMap: Entity?
-    var camEntity: AnchorEntity = {
-        let camPov = AnchorEntity()
-        camPov.position = [0, 0, 0]
-        return camPov
-    }()
     
+    // Setting up collision components to every ring, removed the if statement because I think these collision shapes are more consistent, so they override the preset collision components in realitykit"
     func setupTapGesture(for hoop: Entity) {
         // Add a collision component to the hoop if it doesn't already have one
 //        if hoop.components[CollisionComponent.self] == nil {
@@ -21,6 +18,7 @@ import RealityKitContent
         }
 //    }
     
+    // set up taps on hoops"
     var hoopTapGesture: some Gesture {
         SpatialTapGesture()
             .targetedToAnyEntity()
@@ -34,6 +32,7 @@ import RealityKitContent
             }
     }
     
+    // function responsible for shifting the map over. We move the "Root" child from the "Whatever" usda over, and all of Roots children move with it. Pretty straightforward after overcomplicating it for a real long time lmao
     private func moveEntitiesRelativeToHoop(hoop: Entity, in map: Entity) {
         let hoopPosition = hoop.position(relativeTo: nil)
         let offset = SIMD3<Float>(-hoopPosition.x, 0, -hoopPosition.z)

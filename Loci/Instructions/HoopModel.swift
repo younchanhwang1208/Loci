@@ -2,6 +2,9 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
+/*
+ This is a model I 'borrowed' from YT which basically allows the hoop in Step2View to be clicked on / dragged / played with. It's referenced in Step2View.
+ */
 struct HoopModel: View {
     var orientation: SIMD3<Double> = .zero
     var scale: CGFloat = 0.3
