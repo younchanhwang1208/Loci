@@ -23,6 +23,7 @@
 		534CD6442C04395700FCF16B /* HoopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534CD6432C04395700FCF16B /* HoopModel.swift */; };
 		534CD6462C043FFA00FCF16B /* MixedVsFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534CD6452C043FFA00FCF16B /* MixedVsFull.swift */; };
 		534CD6492C0451B100FCF16B /* DragRotationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534CD6482C0451B100FCF16B /* DragRotationModifier.swift */; };
+		534CD64D2C0550B200FCF16B /* ImmersiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534CD64C2C0550B200FCF16B /* ImmersiveViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		534CD6432C04395700FCF16B /* HoopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoopModel.swift; sourceTree = "<group>"; };
 		534CD6452C043FFA00FCF16B /* MixedVsFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedVsFull.swift; sourceTree = "<group>"; };
 		534CD6482C0451B100FCF16B /* DragRotationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragRotationModifier.swift; sourceTree = "<group>"; };
+		534CD64C2C0550B200FCF16B /* ImmersiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				534CD6482C0451B100FCF16B /* DragRotationModifier.swift */,
+				534CD64C2C0550B200FCF16B /* ImmersiveViewModel.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				534CD6492C0451B100FCF16B /* DragRotationModifier.swift in Sources */,
 				534CD6422C0438C900FCF16B /* Step3View.swift in Sources */,
 				534CD6402C0438AF00FCF16B /* Step2View.swift in Sources */,
+				534CD64D2C0550B200FCF16B /* ImmersiveViewModel.swift in Sources */,
 				3DCF44A02BE9C21A0056065B /* LociApp.swift in Sources */,
 				3DCF44A42BE9C21A0056065B /* ImmersiveView.swift in Sources */,
 			);
@@ -432,6 +436,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Loci/Preview Content\"";
+				DEVELOPMENT_TEAM = M38QG8383N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
@@ -457,6 +462,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Loci/Preview Content\"";
+				DEVELOPMENT_TEAM = M38QG8383N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
