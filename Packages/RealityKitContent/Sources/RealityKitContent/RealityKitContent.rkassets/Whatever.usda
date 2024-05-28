@@ -113,13 +113,42 @@ def Xform "Root"
         }
     }
 
+    def "hooptest_0" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (0.24308874, 1.8626451e-9, 0.15919769)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
     def "hooptest_3" (
         active = true
         references = @hooptest.usda@
     )
     {
         float3 xformOp:scale = (2.5, 2.5, 2.5)
-        float3 xformOp:translate = (0.25663543, -2.2351742e-8, -0.90745544)
+        float3 xformOp:translate = (0.25663543, -2.2351742e-8, -0.90721804)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         over "hoop"
@@ -132,6 +161,25 @@ def Xform "Root"
                 }
             }
         }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
     }
 
     def "hooptest_4" (
@@ -140,7 +188,7 @@ def Xform "Root"
     )
     {
         float3 xformOp:scale = (2.5, 2.5, 2.5)
-        float3 xformOp:translate = (-0.23853207, -2.2351742e-8, -1.2097675)
+        float3 xformOp:translate = (-0.15295288, -2.2351742e-8, -1.1705272)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         over "hoop"
@@ -153,6 +201,25 @@ def Xform "Root"
                 }
             }
         }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
     }
 
     def "hooptest_5" (
@@ -161,7 +228,7 @@ def Xform "Root"
     )
     {
         float3 xformOp:scale = (2.5, 2.5, 2.5)
-        float3 xformOp:translate = (-0.8144684, -2.2351742e-8, -1.2599537)
+        float3 xformOp:translate = (-0.15295288, -2.2351742e-8, -1.1705272)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         over "hoop"
@@ -174,6 +241,25 @@ def Xform "Root"
                 }
             }
         }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
     }
 
     def "hooptest_6" (
@@ -182,7 +268,7 @@ def Xform "Root"
     )
     {
         float3 xformOp:scale = (2.5, 2.5, 2.5)
-        float3 xformOp:translate = (-1.3091519, -2.2351742e-8, -1.2599537)
+        float3 xformOp:translate = (-0.5288601, -2.2351742e-8, -1.246794)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         over "hoop"
@@ -195,6 +281,25 @@ def Xform "Root"
                 }
             }
         }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
     }
 
     def "hooptest_7" (
@@ -203,7 +308,7 @@ def Xform "Root"
     )
     {
         float3 xformOp:scale = (2.5, 2.5, 2.5)
-        float3 xformOp:translate = (-1.3091519, -2.2351742e-8, -0.8652251)
+        float3 xformOp:translate = (-0.9528084, -2.2351742e-8, -1.246794)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         over "hoop"
@@ -216,6 +321,25 @@ def Xform "Root"
                 }
             }
         }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
     }
 
     def "hooptest_8" (
@@ -224,7 +348,7 @@ def Xform "Root"
     )
     {
         float3 xformOp:scale = (2.5, 2.5, 2.5)
-        float3 xformOp:translate = (-1.3091519, -2.2351742e-8, -0.53097415)
+        float3 xformOp:translate = (-1.2991904, -2.2351742e-8, -1.246794)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         over "hoop"
@@ -237,6 +361,25 @@ def Xform "Root"
                 }
             }
         }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
     }
 
     def "hooptest_9" (
@@ -245,7 +388,7 @@ def Xform "Root"
     )
     {
         float3 xformOp:scale = (2.5, 2.5, 2.5)
-        float3 xformOp:translate = (-1.4043432, -2.2351742e-8, -0.13390577)
+        float3 xformOp:translate = (-1.7399083, -2.2351742e-8, -1.246794)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         over "hoop"
@@ -258,16 +401,286 @@ def Xform "Root"
                 }
             }
         }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
     }
 
-    def "hooptest_0" (
+    def "hooptest_10" (
         active = true
         references = @hooptest.usda@
     )
     {
         float3 xformOp:scale = (2.5, 2.5, 2.5)
-        float3 xformOp:translate = (0.24308874, 1.8626451e-9, 0.15919769)
+        float3 xformOp:translate = (-1.2991904, -2.2351742e-8, -0.8589053)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_10/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
+    def "hooptest_11" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-1.2991904, -2.2351742e-8, -0.53640926)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_11/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
+    def "hooptest_12" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-1.2991904, -2.2351742e-8, -0.12146795)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_12/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
+    def "hooptest_13" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-1.2991904, -2.2351742e-8, -0.12146795)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_13/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
+    def "hooptest_14" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-2.1207852, -2.2351742e-8, -1.246794)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_14/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
+    def "hooptest_15" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-2.4014754, -2.2351742e-8, -1.246794)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_15/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
+    def "hooptest_16" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-2.4014754, -2.2351742e-8, -1.246794)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_16/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
 
         def RealityKitComponent "Collider"
         {
