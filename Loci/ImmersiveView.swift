@@ -34,12 +34,24 @@ struct ImmersiveView: View {
                 }
                 
                 // Add tap gestures to hoops
-                for i in 0...16 {
+                for i in 0...61 {
                     let hoopName = "hooptest_\(i)"
                     if let hoop = map.findEntity(named: hoopName) {
 //                        print("Setting up tap gesture for hoop: \(hoopName)")
                         model.setupTapGesture(for: hoop)
                         print("Set up tap gesture for hoop: \(hoopName)")
+                    
+                    } else {
+                        print("Could not find hoop: \(hoopName)")
+                    }
+                }
+                
+                // Hide the first 10 hoops
+                for i in 0..<10 {
+                    let hoopName = "hooptest_\(i)"
+                    if let hoop = map.findEntity(named: hoopName) {
+                        hoop.isEnabled = false
+                        print("Disabled hoop: \(hoopName)")
                     } else {
                         print("Could not find hoop: \(hoopName)")
                     }
