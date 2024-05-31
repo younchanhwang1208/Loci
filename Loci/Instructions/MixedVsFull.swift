@@ -28,6 +28,7 @@ struct MixedVsFull: View {
                             }
                             .scaleEffect(isHovering ? 1.7 : 1.0)
                             .overlay(Color.black.opacity(0.3))
+                            .cornerRadius(10)
                             //.animation(.easeInOut(duration: 0.3), value: isHovering)
                     )
                     .foregroundColor(.white)
