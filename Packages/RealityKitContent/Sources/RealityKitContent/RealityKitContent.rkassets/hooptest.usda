@@ -10,12 +10,13 @@
 
 def Xform "Root"
 {
+    reorder nameChildren = ["hoop", "hoop_1"]
     def "hoop" (
         active = true
         customData = {
             float3 rotationEulerHint = (1.5707964, -8.742264e-8, 0)
         }
-        prepend references = @hoop.usdz@
+        references = @hoop.usdz@
     )
     {
         quatf xformOp:orient = (0.70710677, 0.70710677, -3.090857e-8, 3.090857e-8)
@@ -29,6 +30,25 @@ def Xform "Root"
             uniform token info:id = "RealityKit.ImageBasedLight"
             float intensityExponent = 0.9626697
             bool isGlobalIBL = 0
+        }
+
+        over "Materials"
+        {
+            over "iayseozdemir_hoop_piercing"
+            {
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+
+                over "pbr_shader"
+                {
+                    color3f inputs:diffuseColor = (1, 0.9702617, 0.98454636) (
+                        colorSpace = "srgb_displayp3"
+                    )
+                    color3f inputs:emissiveColor = (0.10332806, 0.03736189, 0) (
+                        colorSpace = "srgb_displayp3"
+                    )
+                }
+            }
         }
     }
 }
