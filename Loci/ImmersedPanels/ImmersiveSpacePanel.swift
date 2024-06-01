@@ -4,6 +4,7 @@ import RealityKit
 
 struct ImmersiveSpacePanel: View {
     @Binding var showImmersiveSpace: Bool
+    @Binding var isHandlingImmersiveSpace: Bool
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
 
@@ -14,6 +15,8 @@ struct ImmersiveSpacePanel: View {
                 .padding(.top, 50)
 
             Button(showImmersiveSpace ? "Close Immersive Space" : "Open Immersive Space") {
+                if isHandlingImmersiveSpace { return }
+                isHandlingImmersiveSpace = true
                 Task {
                     if showImmersiveSpace {
                         await dismissImmersiveSpace()
@@ -28,6 +31,7 @@ struct ImmersiveSpacePanel: View {
                             showImmersiveSpace = false
                         }
                     }
+                    isHandlingImmersiveSpace = false
                 }
             }
             .buttonStyle(.bordered)
@@ -43,8 +47,9 @@ struct ImmersiveSpacePanel: View {
 // Wrapper to provide the binding for the preview
 struct ImmersiveSpacePanelPreviewWrapper: View {
     @State private var showImmersiveSpace = false
+    @State private var isHandlingImmersiveSpace = false
 
     var body: some View {
-        ImmersiveSpacePanel(showImmersiveSpace: $showImmersiveSpace)
+        ImmersiveSpacePanel(showImmersiveSpace: $showImmersiveSpace, isHandlingImmersiveSpace: $isHandlingImmersiveSpace)
     }
 }

@@ -3,24 +3,36 @@ import RealityKit
 
 struct MapNav: View {
     @State private var showImmersiveSpace = false
+    @State private var isHandlingImmersiveSpace = false
 
     var body: some View {
         NavigationStack {
             VStack {
                 if !showImmersiveSpace {
-                    OriginalPanel(showImmersiveSpace: $showImmersiveSpace)
+                    OriginalPanel(showImmersiveSpace: $showImmersiveSpace, isHandlingImmersiveSpace: $isHandlingImmersiveSpace)
                         .padding(70)
                 } else {
-                    ImmersiveSpacePanel(showImmersiveSpace: $showImmersiveSpace)
+                    ImmersiveSpacePanel(showImmersiveSpace: $showImmersiveSpace, isHandlingImmersiveSpace: $isHandlingImmersiveSpace)
                         .padding(70)
+                }
+            }
+            .onDisappear {
+                Task {
+                    if showImmersiveSpace {
+                        await dismissImmersiveSpace()
+                        showImmersiveSpace = false
+                    }
                 }
             }
         }
     }
+
+    @Environment(\.dismissImmersiveSpace) private var dismissImmersiveSpace
 }
 
 struct OriginalPanel: View {
     @Binding var showImmersiveSpace: Bool
+    @Binding var isHandlingImmersiveSpace: Bool
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
 
@@ -35,6 +47,8 @@ struct OriginalPanel: View {
 
             Toggle(showImmersiveSpace ? "Close Immersive Space" : "Open Immersive Space", isOn: $showImmersiveSpace)
                 .onChange(of: showImmersiveSpace) { _, isShowing in
+                    if isHandlingImmersiveSpace { return }
+                    isHandlingImmersiveSpace = true
                     Task {
                         if isShowing {
                             switch await openImmersiveSpace(id: "ImmersiveSpace") {
@@ -48,6 +62,7 @@ struct OriginalPanel: View {
                         } else {
                             await dismissImmersiveSpace()
                         }
+                        isHandlingImmersiveSpace = false
                     }
                 }
                 .toggleStyle(.button)
