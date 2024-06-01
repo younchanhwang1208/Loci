@@ -143,57 +143,7 @@
     "objectMetadataList" : [
       [
         "CD11C75A-51EC-49FE-9A95-B92389BD0ABF",
-        "Root",
-        "hooptest_13"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "CD11C75A-51EC-49FE-9A95-B92389BD0ABF",
-        "Root",
-        "totem_1",
-        "hoop",
-        "Materials"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "CD11C75A-51EC-49FE-9A95-B92389BD0ABF",
-        "Root",
-        "totem_1",
-        "hoop",
-        "Meshes"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "CD11C75A-51EC-49FE-9A95-B92389BD0ABF",
         "Root"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "CD11C75A-51EC-49FE-9A95-B92389BD0ABF",
-        "Root",
-        "totem_1"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "CD11C75A-51EC-49FE-9A95-B92389BD0ABF",
-        "Root",
-        "totem_1",
-        "hoop"
       ],
       {
         "isExpanded" : true,
