@@ -46,14 +46,15 @@ struct ImmersiveView: View {
                     }
                 }
                 
-                // Hide the first 10 hoops
-                for i in 0..<10 {
-                    let hoopName = "hooptest_\(i)"
-                    if let hoop = map.findEntity(named: hoopName) {
-                        hoop.isEnabled = false
-                        print("Disabled hoop: \(hoopName)")
+                // Hide the hoops, store their locations
+                for i in 0...50 {
+                    let locName = "loc_\(i)"
+                    if let totem = map.findEntity(named: locName) {
+                        model.getTotemLocation(for: totem, index: i)
+                        totem.isEnabled = false
+                        print("Disabled hoop: \(locName)")
                     } else {
-                        print("Could not find hoop: \(hoopName)")
+                        print("Could not find hoop: \(locName)")
                     }
                 }
                 
