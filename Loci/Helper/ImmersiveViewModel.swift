@@ -18,6 +18,11 @@ import RealityKitContent
         }
 //    }
     
+    func getTotemLocation(for totem: Entity, index: Int) {
+        let totemLocation = totem.position(relativeTo: nil)
+        print("Totem \(index) location: \(totemLocation)")
+    }
+    
     // set up taps on hoops"
     var hoopTapGesture: some Gesture {
         SpatialTapGesture()
