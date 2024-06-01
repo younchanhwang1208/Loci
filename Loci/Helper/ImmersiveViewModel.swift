@@ -6,6 +6,20 @@ import RealityKitContent
 @MainActor class ImmersiveViewModel: ObservableObject {
     // create an initialMap variable for relative positions"
     var initialMap: Entity?
+    var totemDictionary: [String: [Int: Totem]] = [:]
+
+    // Initialize the dictionary with 10 locations, each will contain a list of up to 5 empty Totem instances
+    init() {
+        for i in 0..<10 {
+            let key = "sector_\(i)"
+            var sectorTotems: [Int: Totem] = [:]
+            for j in 0..<5 {
+                let totemIndex = j
+                sectorTotems[totemIndex] = Totem()
+            }
+            totemDictionary[key] = sectorTotems
+        }
+    }
     
     // Setting up collision components to every ring, removed the if statement because I think these collision shapes are more consistent, so they override the preset collision components in realitykit"
     func setupTapGesture(for hoop: Entity) {
@@ -21,7 +35,16 @@ import RealityKitContent
     func getTotemLocation(for totem: Entity, index: Int) {
         let totemLocation = totem.position(relativeTo: nil)
         print("Totem \(index) location: \(totemLocation)")
+
+        let totemInstance = Totem(phrase: "Sample Phrase")
+
+        let sectorIndex = index / 5
+        let totemIndex = index % 5
+        let key = "sector_\(sectorIndex)"
+
+        totemDictionary[key]?[totemIndex] = totemInstance
     }
+
     
     // set up taps on hoops"
     var hoopTapGesture: some Gesture {

@@ -50,6 +50,7 @@ struct ImmersiveView: View {
                 for i in 0...50 {
                     let locName = "loc_\(i)"
                     if let totem = map.findEntity(named: locName) {
+                        model.setupTapGesture(for: totem) // enable clickable 
                         model.getTotemLocation(for: totem, index: i)
                         totem.isEnabled = false
                         print("Disabled hoop: \(locName)")
