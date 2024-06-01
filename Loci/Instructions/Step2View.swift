@@ -14,7 +14,7 @@ struct Step2View: View {
                             .padding(.bottom, 15)
 
                         Text("""
-                        - Navigate the memory palace by pinching the Waypoint Hoops placed around the map.
+                        - Navigate the memory palace by pinching the Waypoint Hoops placed around the map or by using your Navigation Panel to visit specific rooms.
                         - Selecting a hoop will teleport you to the hoops new location.
                         - Move your head to look around the memory palace, or pinch and drag the map to change your view.
                         """)
