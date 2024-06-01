@@ -1,9 +1,3 @@
-//
-//  ImmersivePanel.swift
-//  Loci
-//
-//  Created by Shane Mion on 6/1/24.
-//
 import Foundation
 import SwiftUI
 import RealityKit
@@ -39,6 +33,18 @@ struct ImmersiveSpacePanel: View {
             .buttonStyle(.bordered)
             .padding()
         }
-        .padding(70)
+    }
+}
+
+#Preview {
+    ImmersiveSpacePanelPreviewWrapper()
+}
+
+// Wrapper to provide the binding for the preview
+struct ImmersiveSpacePanelPreviewWrapper: View {
+    @State private var showImmersiveSpace = false
+
+    var body: some View {
+        ImmersiveSpacePanel(showImmersiveSpace: $showImmersiveSpace)
     }
 }
