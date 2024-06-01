@@ -26,6 +26,7 @@
 		534CD64D2C0550B200FCF16B /* ImmersiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534CD64C2C0550B200FCF16B /* ImmersiveViewModel.swift */; };
 		539DA82F2C0AF96600F32F34 /* Totem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539DA82E2C0AF96600F32F34 /* Totem.swift */; };
 		539DA8322C0BBCC600F32F34 /* ImmersiveSpacePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539DA8312C0BBCC600F32F34 /* ImmersiveSpacePanel.swift */; };
+		539DA8352C0BC74B00F32F34 /* EnvironmentKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539DA8342C0BC74B00F32F34 /* EnvironmentKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		534CD64C2C0550B200FCF16B /* ImmersiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveViewModel.swift; sourceTree = "<group>"; };
 		539DA82E2C0AF96600F32F34 /* Totem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Totem.swift; sourceTree = "<group>"; };
 		539DA8312C0BBCC600F32F34 /* ImmersiveSpacePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveSpacePanel.swift; sourceTree = "<group>"; };
+		539DA8342C0BC74B00F32F34 /* EnvironmentKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		3DCF449A2BE9C21A0056065B /* Loci */ = {
 			isa = PBXGroup;
 			children = (
+				539DA8332C0BC73800F32F34 /* EnvironmentKeys */,
 				3DCF449F2BE9C21A0056065B /* LociApp.swift */,
 				534CD6472C04519D00FCF16B /* Helper */,
 				534CD63C2C04386400FCF16B /* Instructions */,
@@ -180,6 +183,14 @@
 				539DA8312C0BBCC600F32F34 /* ImmersiveSpacePanel.swift */,
 			);
 			path = ImmersedPanels;
+			sourceTree = "<group>";
+		};
+		539DA8332C0BC73800F32F34 /* EnvironmentKeys */ = {
+			isa = PBXGroup;
+			children = (
+				539DA8342C0BC74B00F32F34 /* EnvironmentKeys.swift */,
+			);
+			path = EnvironmentKeys;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				539DA8352C0BC74B00F32F34 /* EnvironmentKeys.swift in Sources */,
 				534CD63E2C04389F00FCF16B /* Step1View.swift in Sources */,
 				534CD6182BF9D73500FCF16B /* MapNav.swift in Sources */,
 				534CD63B2C03FA7800FCF16B /* PlaceObjects.swift in Sources */,

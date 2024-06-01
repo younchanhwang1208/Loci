@@ -8,9 +8,9 @@ struct Step1View: View {
                 .padding(.bottom, 15)
 
             Text("""
-            - The memory palace is divided into multiple sections.
-            - Each section represents a distinct part of the path that you will follow to memorize items.
-            - There are 14 sections, with each sector containing 4 totems.
+            - The memory palace is divided into a map containing 10 rooms.
+            - Each room represents a distinct part of the path that you will follow to memorize items.
+            - Each room containing 5 memory totems.
             - Visualize walking through these paths as you place your items.
             """)
             .padding(.bottom, 30)
