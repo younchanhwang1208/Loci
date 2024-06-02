@@ -21,6 +21,7 @@ struct PlaceColorPairView: View {
 struct ImmersiveSpacePanel: View {
     @Binding var showImmersiveSpace: Bool
     @Binding var isHandlingImmersiveSpace: Bool
+    @State var showObject: Bool = false
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
 
@@ -53,6 +54,23 @@ struct ImmersiveSpacePanel: View {
             .buttonStyle(.bordered)
             .padding()
             
+            //turn on/off 3d objects
+            Button(showObject ? "Hide Objects" : "Show Objects") {
+                showObject.toggle()
+                Task {
+                    await dismissImmersiveSpace()
+                    if showObject {
+                        await openImmersiveSpace(id: "ImmersiveSpace2")
+                    }
+                    else {
+                        await openImmersiveSpace(id:"ImmersiveSpace")
+                    }
+                    showImmersiveSpace = true
+                    isHandlingImmersiveSpace = true
+                    }
+                }
+                .buttonStyle(.bordered)
+                .padding()
             // Place-Color Pairs
             VStack(alignment: .leading) {
                 PlaceColorPairView(place: "Medbay", color: .red)
