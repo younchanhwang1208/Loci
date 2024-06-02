@@ -2,6 +2,22 @@ import Foundation
 import SwiftUI
 import RealityKit
 
+struct PlaceColorPairView: View {
+    let place: String
+    let color: Color
+
+    var body: some View {
+        HStack {
+            Circle()
+                .fill(color)
+                .frame(width: 20, height: 20)
+            Text("\(place)")
+                .padding(.leading, 10)
+        }
+    }
+}
+
+
 struct ImmersiveSpacePanel: View {
     @Binding var showImmersiveSpace: Bool
     @Binding var isHandlingImmersiveSpace: Bool
@@ -35,6 +51,21 @@ struct ImmersiveSpacePanel: View {
                 }
             }
             .buttonStyle(.bordered)
+            .padding()
+            
+            // Place-Color Pairs
+            VStack(alignment: .leading) {
+                PlaceColorPairView(place: "Medbay", color: .red)
+                PlaceColorPairView(place: "Security", color: .orange)
+                PlaceColorPairView(place: "Reactor", color: .yellow)
+                PlaceColorPairView(place: "Electrical", color: .green)
+                PlaceColorPairView(place: "Storage", color: .blue)
+                PlaceColorPairView(place: "Communicators", color: .blue.opacity(0.7))
+                PlaceColorPairView(place: "Navigation", color: .purple)
+                PlaceColorPairView(place: "Oxygen", color: .pink)
+                PlaceColorPairView(place: "Cafeteria", color: .green.opacity(0.7))
+                PlaceColorPairView(place: "Admin", color: .brown)
+            }
             .padding()
         }
     }
