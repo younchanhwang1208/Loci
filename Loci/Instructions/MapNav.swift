@@ -44,7 +44,6 @@ struct OriginalPanel: View {
                 .scaleEffect(1.5)
                 .opacity(0.5)
                 .ignoresSafeArea()
-            
             VStack {
                 Text("Map Navigation")
                     .font(.largeTitle)

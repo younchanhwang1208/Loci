@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D20A6B52C0D06EE00721EC6 /* ImmersiveView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20A6B42C0D06EE00721EC6 /* ImmersiveView2.swift */; };
 		3DCF449E2BE9C21A0056065B /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 3DCF449D2BE9C21A0056065B /* RealityKitContent */; };
 		3DCF44A02BE9C21A0056065B /* LociApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCF449F2BE9C21A0056065B /* LociApp.swift */; };
 		3DCF44A22BE9C21A0056065B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCF44A12BE9C21A0056065B /* ContentView.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D20A6B42C0D06EE00721EC6 /* ImmersiveView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImmersiveView2.swift; sourceTree = "<group>"; };
 		3DCF44982BE9C21A0056065B /* Loci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loci.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DCF449C2BE9C21A0056065B /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		3DCF449F2BE9C21A0056065B /* LociApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LociApp.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				539DA8302C0BBC9400F32F34 /* ImmersedPanels */,
 				3DCF44A12BE9C21A0056065B /* ContentView.swift */,
 				3DCF44A32BE9C21A0056065B /* ImmersiveView.swift */,
+				3D20A6B42C0D06EE00721EC6 /* ImmersiveView2.swift */,
 				3DCF44A52BE9C21A0056065B /* ImageBasedLighting.skybox */,
 				3DCF44A72BE9C21C0056065B /* Assets.xcassets */,
 				3DCF44AC2BE9C21C0056065B /* Info.plist */,
@@ -313,6 +316,7 @@
 				534CD6422C0438C900FCF16B /* Step3View.swift in Sources */,
 				534CD6402C0438AF00FCF16B /* Step2View.swift in Sources */,
 				534CD64D2C0550B200FCF16B /* ImmersiveViewModel.swift in Sources */,
+				3D20A6B52C0D06EE00721EC6 /* ImmersiveView2.swift in Sources */,
 				3DCF44A02BE9C21A0056065B /* LociApp.swift in Sources */,
 				3DCF44A42BE9C21A0056065B /* ImmersiveView.swift in Sources */,
 			);
