@@ -37,36 +37,48 @@ struct OriginalPanel: View {
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
 
     var body: some View {
-        VStack {
-            Text("Map Navigation")
-                .font(.largeTitle)
-                .padding(.top, 50)
+        ZStack{
+            Image("amongus_mapnav")
+                .resizable()
+                .scaledToFill()
+                .scaleEffect(1.5)
+                .opacity(0.5)
+                .ignoresSafeArea()
+            
+            VStack {
+                Text("Map Navigation")
+                    .font(.largeTitle)
+                    .padding(.top, 50)
+                Text("Toggle to open the Among Us Immersive Space.")
+                    .padding(.bottom, 30)
 
-            Text("Toggle to open the Among Us Immersive Space.")
-                .padding(.bottom, 30)
-
-            Toggle(showImmersiveSpace ? "Close Immersive Space" : "Open Immersive Space", isOn: $showImmersiveSpace)
-                .onChange(of: showImmersiveSpace) { _, isShowing in
-                    if isHandlingImmersiveSpace { return }
-                    isHandlingImmersiveSpace = true
-                    Task {
-                        if isShowing {
-                            switch await openImmersiveSpace(id: "ImmersiveSpace") {
-                            case .opened:
-                                break
-                            case .error, .userCancelled:
-                                showImmersiveSpace = false
-                            @unknown default:
-                                showImmersiveSpace = false
+                Toggle(showImmersiveSpace ? "Close Immersive Space" : "Open Immersive Space", isOn: $showImmersiveSpace)
+                    .onChange(of: showImmersiveSpace) { _, isShowing in
+                        if isHandlingImmersiveSpace { return }
+                        isHandlingImmersiveSpace = true
+                        Task {
+                            if isShowing {
+                                switch await openImmersiveSpace(id: "ImmersiveSpace") {
+                                case .opened:
+                                    break
+                                case .error, .userCancelled:
+                                    showImmersiveSpace = false
+                                @unknown default:
+                                    showImmersiveSpace = false
+                                }
+                            } else {
+                                await dismissImmersiveSpace()
                             }
-                        } else {
-                            await dismissImmersiveSpace()
+                            isHandlingImmersiveSpace = false
                         }
-                        isHandlingImmersiveSpace = false
                     }
+                    .toggleStyle(.button)
+                    .padding()
                 }
-                .toggleStyle(.button)
-                .padding()
         }
-    }
+        
+        }
+
+            
+        
 }

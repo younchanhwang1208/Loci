@@ -12,3 +12,4 @@ struct LociApp: App {
         }.immersionStyle(selection: .constant(.full), in: .full)
     }
 }
+
