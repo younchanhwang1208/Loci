@@ -25,7 +25,6 @@ struct PlaceObjects: View {
                         NavigationLink(destination: Step1View()) {
                             Text("Next")
                                 .padding()
-                                .background(Color.blue)
                                 .foregroundColor(.white)
                                 .cornerRadius(10)
                         }

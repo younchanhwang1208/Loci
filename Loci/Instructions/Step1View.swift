@@ -14,7 +14,6 @@ struct Step1View: View {
             - Visualize walking through these paths as you place your items.
             """)
             .padding(.bottom, 30)
-            
             Color.clear
                 .overlay {
                     Image("amongus_minimap")

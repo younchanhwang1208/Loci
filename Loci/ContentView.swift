@@ -15,7 +15,6 @@ struct ContentView: View {
                     Text("Choose Mode")
                         .font(.title)
                         .padding()
-                        .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
