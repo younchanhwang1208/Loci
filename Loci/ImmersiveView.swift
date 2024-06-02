@@ -3,17 +3,6 @@ import RealityKit
 import RealityKitContent
 
 struct ImmersiveView: View {
-    /* 
-     Following the "MVVM (Model-View-Model View)" Swift decoupling strategy.
-     
-     The struct ImmersiveView is the frontend stuff, where we load content into our RealityView. We first load map in, which is the "Whatever" entity in the RealityKitContent folder. The "Whatever" entity holds a child called "Root", and "Root" contains its own children, namely the "hoops_{i}" and the "amongus" usda's (The amongus usda is the map, so the naming scheme is kind of confusing but hopefully this comment cleared it up"
-     
-     The image based light is default, we might need to add it to Step View 2 to the hoop, because the hoop in the preview is not lit"
-     
-     The for loop looping through hoops is adding the collision components to each of the hoops, which basically just ensures that they are able to be pinched/tapped/selected by the user when clicked on after SpatialTapGesture is placed on the entire "Whatever" entity in line #49. The collision component code is executed by finding each of the hoops prerendered into the map, and calling the method defined in the VM component in "ImmersiveViewModel"
-     
-     
-    */
     @StateObject private var model = ImmersiveViewModel()
     
     var body: some View {
@@ -25,7 +14,6 @@ struct ImmersiveView: View {
                 map.scale = [10, 10, 10]
                 content.add(map)
 
-                
                 // Add an ImageBasedLight for the immersive content
                 if let resource = try? await EnvironmentResource(named: "ImageBasedLight") {
                     let iblComponent = ImageBasedLightComponent(source: .single(resource), intensityExponent: 0.25)
@@ -33,14 +21,126 @@ struct ImmersiveView: View {
                     map.components.set(ImageBasedLightReceiverComponent(imageBasedLight: map))
                 }
                 
+                var wingIndex = 0
                 // Add tap gestures to hoops
-                for i in 0...61 {
+                for i in 0...75 {
                     let hoopName = "hooptest_\(i)"
+
+                    // sector_0 (Medbay)
+                    if i == 10 {
+//                        if let wing = map.findEntity(named: "wings_\(wingIndex)") {
+                        if let wing = map.findEntity(named: "wingstest") {
+                            model.setupAutoCollider(for: wing)
+                            print("Set up auto collider for Medbay: wings_\(wingIndex)")
+                            wingIndex += 1
+                        } else {
+                            print("Could not find Medbay wing: wings_\(wingIndex)")
+                        }
+                    }
+
+                    // sector_1 (Security)
+                    if i == 22 {
+                        if let wing = map.findEntity(named: "wings_\(wingIndex)") {
+                            model.setupAutoCollider(for: wing)
+                            print("Set up auto collider for Security: wings_\(wingIndex)")
+                            wingIndex += 1
+                        } else {
+                            print("Could not find Security wing: wings_\(wingIndex)")
+                        }
+                    }
+
+                    // sector_2 (Reactor)
+                    if i == 23 {
+                        if let wing = map.findEntity(named: "wings_\(wingIndex)") {
+                            model.setupAutoCollider(for: wing)
+                            print("Set up auto collider for Reactor: wings_\(wingIndex)")
+                            wingIndex += 1
+                        } else {
+                            print("Could not find Reactor wing: wings_\(wingIndex)")
+                        }
+                    }
+
+                    // sector_3 (Electrical)
+                    if i == 31 {
+                        if let wing = map.findEntity(named: "wings_\(wingIndex)") {
+                            model.setupAutoCollider(for: wing)
+                            print("Set up auto collider for Electrical: wings_\(wingIndex)")
+                            wingIndex += 1
+                        } else {
+                            print("Could not find Electrical wing: wings_\(wingIndex)")
+                        }
+                    }
+
+                    // sector_4 (Storage)
+                    if i == 33 {
+                        if let wing = map.findEntity(named: "wings_\(wingIndex)") {
+                            model.setupAutoCollider(for: wing)
+                            print("Set up auto collider for Storage: wings_\(wingIndex)")
+                            wingIndex += 1
+                        } else {
+                            print("Could not find Storage wing: wings_\(wingIndex)")
+                        }
+                    }
+
+                    // sector_5 (Communicators)
+                    if i == 45 {
+                        if let wing = map.findEntity(named: "wings_\(wingIndex)") {
+                            model.setupAutoCollider(for: wing)
+                            print("Set up auto collider for Communicators: wings_\(wingIndex)")
+                            wingIndex += 1
+                        } else {
+                            print("Could not find Communicators wing: wings_\(wingIndex)")
+                        }
+                    }
+
+                    // sector_6 (Navigation)
+                    if i == 54 {
+                        if let wing = map.findEntity(named: "wings_\(wingIndex)") {
+                            model.setupAutoCollider(for: wing)
+                            print("Set up auto collider for Navigation: wings_\(wingIndex)")
+                            wingIndex += 1
+                        } else {
+                            print("Could not find Navigation wing: wings_\(wingIndex)")
+                        }
+                    }
+
+                    // sector_7 (Oxygen)
+                    if i == 57 {
+                        if let wing = map.findEntity(named: "wings_\(wingIndex)") {
+                            model.setupAutoCollider(for: wing)
+                            print("Set up auto collider for Oxygen: wings_\(wingIndex)")
+                            wingIndex += 1
+                        } else {
+                            print("Could not find Oxygen wing: wings_\(wingIndex)")
+                        }
+                    }
+
+                    // sector_8 (Cafeteria)
+                    if i == 1 {
+                        if let wing = map.findEntity(named: "wings_\(wingIndex)") {
+                            model.setupAutoCollider(for: wing)
+                            print("Set up auto collider for Cafeteria: wings_\(wingIndex)")
+                            wingIndex += 1
+                        } else {
+                            print("Could not find Cafeteria wing: wings_\(wingIndex)")
+                        }
+                    }
+
+                    // sector_9 (Admin)
+                    if i == 19 {
+                        if let wing = map.findEntity(named: "wings_\(wingIndex)") {
+                            model.setupAutoCollider(for: wing)
+                            print("Set up auto collider for Admin: wings_\(wingIndex)")
+                            wingIndex += 1
+                        } else {
+                            print("Could not find Admin wing: wings_\(wingIndex)")
+                        }
+                    }
+
+                    // Set up tap gesture for default hoops
                     if let hoop = map.findEntity(named: hoopName) {
-//                        print("Setting up tap gesture for hoop: \(hoopName)")
                         model.setupTapGesture(for: hoop)
                         print("Set up tap gesture for hoop: \(hoopName)")
-                    
                     } else {
                         print("Could not find hoop: \(hoopName)")
                     }
@@ -50,9 +150,9 @@ struct ImmersiveView: View {
                 for i in 0...50 {
                     let locName = "loc_\(i)"
                     if let totem = map.findEntity(named: locName) {
-                        model.setupTapGesture(for: totem) // enable clickable 
+                        model.setupTapGesture(for: totem) // enable clickable
                         model.getTotemLocation(for: totem, index: i)
-                        totem.isEnabled = false
+                        totem.isEnabled = true
                         print("Disabled hoop: \(locName)")
                     } else {
                         print("Could not find hoop: \(locName)")

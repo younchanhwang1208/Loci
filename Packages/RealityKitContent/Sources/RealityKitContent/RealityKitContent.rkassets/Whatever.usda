@@ -10,7 +10,7 @@
 
 def Xform "Root"
 {
-    reorder nameChildren = ["loc_2", "loc_3", "loc_8", "loc_9", "loc_10", "loc_7", "loc_13", "loc_14", "amongus_1", "loc_15", "loc_12", "loc_11", "loc_16", "loc_17", "loc_20", "loc_18", "loc_19", "loc_25", "hooptest_63", "loc_24", "loc_22", "loc_21", "loc_23", "loc_26", "loc_27", "loc_28", "loc_29", "loc_30", "hooptest_62", "loc_31", "loc_32", "loc_33", "hooptest_64", "loc_35", "loc_36", "loc_37", "loc_34", "loc_40", "loc_42", "loc_43", "loc_44", "loc_45", "loc_38", "loc_39", "loc_41", "loc_50", "loc_46", "loc_49", "loc_1", "loc_4", "amongus", "hooptest_0", "hooptest_1", "hooptest_2", "hooptest_3", "hooptest_4", "hooptest_5", "hooptest_6", "hooptest_7", "hooptest_8", "hooptest_9", "hooptest_10", "hooptest_11", "hooptest_12", "hooptest_13", "hooptest_14", "hooptest_15", "hooptest_16", "hooptest_17", "hooptest_18", "hooptest_19", "hooptest_20", "hooptest_21", "hooptest_22", "hooptest_23", "hooptest_24", "hooptest_25", "hooptest_26", "hooptest_27", "hooptest_28", "hooptest_29", "hooptest_30", "hooptest_31", "hooptest_32", "hooptest_33", "hooptest_34", "hooptest_35", "hooptest_36", "hooptest_37", "hooptest_38", "hooptest_39", "hooptest_40", "hooptest_41", "hooptest_42", "hooptest_43", "hooptest_44", "hooptest_45", "hooptest_46", "hooptest_47", "hooptest_48", "hooptest_49", "hooptest_50", "hooptest_51", "hooptest_52", "hooptest_53", "hooptest_54", "hooptest_55", "hooptest_56", "hooptest_57", "hooptest_58", "hooptest_59", "hooptest_60", "hooptest_61", "loc_5", "loc_6"]
+    reorder nameChildren = ["wingstest", "wings_0", "loc_2", "loc_3", "loc_8", "loc_9", "loc_10", "loc_7", "loc_13", "loc_14", "loc_15", "loc_12", "loc_11", "loc_16", "loc_17", "loc_20", "loc_18", "loc_19", "loc_25", "hooptest_63", "loc_24", "loc_22", "loc_21", "loc_23", "loc_26", "loc_27", "loc_28", "loc_29", "loc_30", "hooptest_62", "loc_31", "loc_32", "loc_33", "hooptest_64", "loc_35", "loc_36", "loc_37", "loc_34", "loc_40", "loc_42", "loc_43", "loc_44", "loc_45", "loc_38", "loc_39", "loc_41", "loc_50", "wings_1", "wings_2", "wings_3", "wings_4", "wings_5", "wings_6", "wings_7", "wings_8", "wings_9", "loc_46", "loc_47", "loc_48", "loc_49", "loc_1", "loc_4", "amongus", "hooptest_0", "hooptest_1", "hooptest_2", "hooptest_3", "hooptest_4", "hooptest_5", "hooptest_6", "hooptest_7", "hooptest_8", "hooptest_9", "hooptest_10", "hooptest_11", "hooptest_12", "hooptest_13", "hooptest_14", "hooptest_15", "hooptest_16", "hooptest_17", "hooptest_18", "hooptest_19", "hooptest_20", "hooptest_21", "hooptest_22", "hooptest_23", "hooptest_24", "hooptest_25", "hooptest_26", "hooptest_27", "hooptest_28", "hooptest_29", "hooptest_30", "hooptest_31", "hooptest_32", "hooptest_33", "hooptest_34", "hooptest_35", "hooptest_36", "hooptest_37", "hooptest_38", "hooptest_39", "hooptest_40", "hooptest_41", "hooptest_42", "hooptest_43", "hooptest_44", "hooptest_45", "hooptest_46", "hooptest_47", "hooptest_48", "hooptest_49", "hooptest_50", "hooptest_51", "hooptest_52", "hooptest_53", "hooptest_54", "hooptest_55", "hooptest_56", "hooptest_57", "hooptest_58", "hooptest_59", "hooptest_60", "hooptest_61", "loc_5", "loc_6"]
     def "amongus" (
         active = true
         prepend apiSchemas = ["MaterialBindingAPI"]
@@ -69,6 +69,14 @@ def Xform "Root"
                 {
                     float3 position = (0.000013662968, 0.005, 0)
                 }
+            }
+        }
+
+        over "hoop"
+        {
+            over "ImageBasedLight"
+            {
+                bool isGlobalIBL = 0
             }
         }
     }
@@ -158,46 +166,6 @@ def Xform "Root"
                 over "iayseozdemir_hoop_piercing"
                 {
                     token outputs:surface.connect = </Root/hooptest_3/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
-                }
-            }
-        }
-
-        def RealityKitComponent "Collider"
-        {
-            uint group = 1
-            uniform token info:id = "RealityKit.Collider"
-            uint mask = 4294967295
-            token type = "Default"
-
-            def RealityKitStruct "Shape"
-            {
-                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
-                token shapeType = "Box"
-
-                def RealityKitStruct "pose"
-                {
-                    float3 position = (0.000013662968, 0.005, 0)
-                }
-            }
-        }
-    }
-
-    def "hooptest_4" (
-        active = true
-        references = @hooptest.usda@
-    )
-    {
-        float3 xformOp:scale = (2.5, 2.5, 2.5)
-        float3 xformOp:translate = (-0.15295288, -2.2351742e-8, -1.1705272)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        over "hoop"
-        {
-            over "Materials"
-            {
-                over "iayseozdemir_hoop_piercing"
-                {
-                    token outputs:surface.connect = </Root/hooptest_4/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
                 }
             }
         }
@@ -2674,6 +2642,11 @@ def Xform "Root"
                     }
                 }
             }
+
+            over "ImageBasedLight"
+            {
+                bool isGlobalIBL = 0
+            }
         }
 
         def RealityKitComponent "Collider"
@@ -3594,995 +3567,6 @@ def Xform "Root"
                 def RealityKitStruct "pose"
                 {
                     float3 position = (0.000013662968, 0.005, 0)
-                }
-            }
-        }
-    }
-
-    def "amongus_1" (
-        active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
-        references = @amongus.usdz@
-    )
-    {
-        rel material:binding = None (
-            bindMaterialAs = "strongerThanDescendants"
-        )
-        float3 xformOp:scale = (0.01, 0.01, 0.01)
-        float3 xformOp:translate = (0, 0, 0)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def RealityKitComponent "Collider"
-        {
-            uint group = 1
-            uniform token info:id = "RealityKit.Collider"
-            uint mask = 4294967295
-            token type = "Default"
-
-            def RealityKitStruct "Shape"
-            {
-                float3 extent = (844.26, 17.80874, 495.20746)
-                token shapeType = "Box"
-
-                def RealityKitStruct "pose"
-                {
-                    float3 position = (0.000015258789, -9.185837, 0.000022888184)
-                }
-            }
-        }
-
-        over "Materials"
-        {
-            over "Caja_tex"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Caja_tex/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/Caja_tex/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/Caja_tex/uvset0.outputs:result>
-                }
-            }
-
-            over "Color_17"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_17/pbr_shader.outputs:surface>
-            }
-
-            over "Groundco"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Groundco/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/Groundco/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/Groundco/uvset0.outputs:result>
-                }
-            }
-
-            over "PISO_M02"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/PISO_M02/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/PISO_M02/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/PISO_M02/uvset0.outputs:result>
-                }
-            }
-
-            over "TEXTUR01"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/TEXTUR01/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/TEXTUR01/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/TEXTUR01/uvset0.outputs:result>
-                }
-            }
-
-            over "TEXTURA"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/TEXTURA/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/TEXTURA/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/TEXTURA/uvset0.outputs:result>
-                }
-            }
-
-            over "Color_C"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_C/pbr_shader.outputs:surface>
-            }
-
-            over "medicina"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/medicina/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/medicina/tex_base.outputs:rgb>
-                    color3f inputs:emissiveColor.connect = </Root/amongus_1/Materials/medicina/tex_emissive.outputs:rgb>
-                    float inputs:opacity.connect = </Root/amongus_1/Materials/medicina/tex_base.outputs:a>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/medicina/uvset0.outputs:result>
-                }
-
-                over "tex_emissive"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/medicina/uvset0.outputs:result>
-                }
-            }
-
-            over "monito01"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/monito01/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/monito01/tex_base.outputs:rgb>
-                    float inputs:opacity.connect = </Root/amongus_1/Materials/monito01/tex_base.outputs:a>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/monito01/uvset0.outputs:result>
-                }
-            }
-
-            over "TEXT_NAV"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/TEXT_NAV/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/TEXT_NAV/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/TEXT_NAV/uvset0.outputs:result>
-                }
-            }
-
-            over "monitor"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/monitor/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/monitor/tex_base.outputs:rgb>
-                    float inputs:opacity.connect = </Root/amongus_1/Materials/monitor/tex_base.outputs:a>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/monitor/uvset0.outputs:result>
-                }
-            }
-
-            over "piso_ele"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/piso_ele/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/piso_ele/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/piso_ele/uvset0.outputs:result>
-                }
-            }
-
-            over "pared_ad"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/pared_ad/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/pared_ad/tex_base.outputs:rgb>
-                    float inputs:metallic.connect = </Root/amongus_1/Materials/pared_ad/tex_metallic.outputs:r>
-                    float inputs:occlusion.connect = </Root/amongus_1/Materials/pared_ad/tex_occlusion.outputs:r>
-                    float inputs:roughness.connect = </Root/amongus_1/Materials/pared_ad/tex_roughness.outputs:r>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/pared_ad/uvset0.outputs:result>
-                }
-
-                over "tex_metallic"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/pared_ad/uvset0.outputs:result>
-                }
-
-                over "tex_roughness"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/pared_ad/uvset0.outputs:result>
-                }
-
-                over "tex_occlusion"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/pared_ad/uvset0.outputs:result>
-                }
-            }
-
-            over "piso_alm"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/piso_alm/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/piso_alm/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/piso_alm/uvset0.outputs:result>
-                }
-            }
-
-            over "piso_caf"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/piso_caf/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/piso_caf/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/piso_caf/uvset0.outputs:result>
-                }
-            }
-
-            over "piso_cam"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/piso_cam/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/piso_cam/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/piso_cam/uvset0.outputs:result>
-                }
-            }
-
-            over "textu_pi"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/textu_pi/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/textu_pi/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/textu_pi/uvset0.outputs:result>
-                }
-            }
-
-            over "textu_01"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/textu_01/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/textu_01/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/textu_01/uvset0.outputs:result>
-                }
-            }
-
-            over "reacto01"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/reacto01/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/reacto01/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/reacto01/uvset0.outputs:result>
-                }
-            }
-
-            over "test_med"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/test_med/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/test_med/tex_base.outputs:rgb>
-                    float inputs:opacity.connect = </Root/amongus_1/Materials/test_med/tex_base.outputs:a>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/test_med/uvset0.outputs:result>
-                }
-            }
-
-            over "text_c01"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/text_c01/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/text_c01/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/text_c01/uvset0.outputs:result>
-                }
-            }
-
-            over "text_com"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/text_com/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/text_com/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/text_com/uvset0.outputs:result>
-                }
-            }
-
-            over "Color_07"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_07/pbr_shader.outputs:surface>
-            }
-
-            over "Color_08"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_08/pbr_shader.outputs:surface>
-            }
-
-            over "Color_16"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_16/pbr_shader.outputs:surface>
-            }
-
-            over "Formica"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Formica/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/Formica/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/Formica/uvset0.outputs:result>
-                }
-            }
-
-            over "_066_Hon"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/_066_Hon/pbr_shader.outputs:surface>
-            }
-
-            over "_080_Dar"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/_080_Dar/pbr_shader.outputs:surface>
-            }
-
-            over "_087_Cya"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/_087_Cya/pbr_shader.outputs:surface>
-            }
-
-            over "_135_Dar"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/_135_Dar/pbr_shader.outputs:surface>
-            }
-
-            over "Caja_t03"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Caja_t03/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/Caja_t03/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/Caja_t03/uvset0.outputs:result>
-                }
-            }
-
-            over "Caja_t01"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Caja_t01/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/Caja_t01/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/Caja_t01/uvset0.outputs:result>
-                }
-            }
-
-            over "Caja_t02"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Caja_t02/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/Caja_t02/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/Caja_t02/uvset0.outputs:result>
-                }
-            }
-
-            over "Color_A0"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_A0/pbr_shader.outputs:surface>
-            }
-
-            over "Color_B0"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_B0/pbr_shader.outputs:surface>
-            }
-
-            over "Color_15"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_15/pbr_shader.outputs:surface>
-            }
-
-            over "Color_C0"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_C0/pbr_shader.outputs:surface>
-            }
-
-            over "Color_13"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_13/pbr_shader.outputs:surface>
-            }
-
-            over "Color_11"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_11/pbr_shader.outputs:surface>
-            }
-
-            over "Color_D0"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_D0/pbr_shader.outputs:surface>
-            }
-
-            over "Color_E0"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_E0/pbr_shader.outputs:surface>
-            }
-
-            over "Color_12"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_12/pbr_shader.outputs:surface>
-            }
-
-            over "Color_F0"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_F0/pbr_shader.outputs:surface>
-            }
-
-            over "Color_04"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_04/pbr_shader.outputs:surface>
-            }
-
-            over "Color_H0"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_H0/pbr_shader.outputs:surface>
-            }
-
-            over "Color_05"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_05/pbr_shader.outputs:surface>
-            }
-
-            over "Color_01"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_01/pbr_shader.outputs:surface>
-            }
-
-            over "Color_I0"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_I0/pbr_shader.outputs:surface>
-            }
-
-            over "Color_14"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_14/pbr_shader.outputs:surface>
-            }
-
-            over "Color_03"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_03/pbr_shader.outputs:surface>
-            }
-
-            over "Color_J0"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_J0/pbr_shader.outputs:surface>
-            }
-
-            over "Color_06"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_06/pbr_shader.outputs:surface>
-            }
-
-            over "Color_10"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_10/pbr_shader.outputs:surface>
-            }
-
-            over "Color_K0"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_K0/pbr_shader.outputs:surface>
-            }
-
-            over "Color_L0"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_L0/pbr_shader.outputs:surface>
-            }
-
-            over "Color_L1"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_L1/pbr_shader.outputs:surface>
-            }
-
-            over "Color_09"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_09/pbr_shader.outputs:surface>
-            }
-
-            over "Color_02"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_02/pbr_shader.outputs:surface>
-            }
-
-            over "Color_M0"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_M0/pbr_shader.outputs:surface>
-            }
-
-            over "Formic01"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Formic01/pbr_shader.outputs:surface>
-            }
-
-            over "FrontCol"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/FrontCol/pbr_shader.outputs:surface>
-            }
-
-            over "Metal_St"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Metal_St/pbr_shader.outputs:surface>
-            }
-
-            over "PISO_MED"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/PISO_MED/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/PISO_MED/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/PISO_MED/uvset0.outputs:result>
-                }
-            }
-
-            over "PISO_M01"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/PISO_M01/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/PISO_M01/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/PISO_M01/uvset0.outputs:result>
-                }
-            }
-
-            over "Quartz_L"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Quartz_L/pbr_shader.outputs:surface>
-            }
-
-            over "Transluc"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Transluc/pbr_shader.outputs:surface>
-            }
-
-            over "Transl01"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Transl01/pbr_shader.outputs:surface>
-            }
-
-            over "Water_Da"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Water_Da/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/Water_Da/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/Water_Da/uvset0.outputs:result>
-                }
-            }
-
-            over "Color_B"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_B/pbr_shader.outputs:surface>
-            }
-
-            over "Color02"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color02/pbr_shader.outputs:surface>
-            }
-
-            over "Color_D"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_D/pbr_shader.outputs:surface>
-            }
-
-            over "Color01"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color01/pbr_shader.outputs:surface>
-            }
-
-            over "Color_H"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_H/pbr_shader.outputs:surface>
-            }
-
-            over "Color03"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color03/pbr_shader.outputs:surface>
-            }
-
-            over "Color_I"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_I/pbr_shader.outputs:surface>
-            }
-
-            over "Color_M"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/Color_M/pbr_shader.outputs:surface>
-            }
-
-            over "monito02"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/monito02/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/monito02/tex_base.outputs:rgb>
-                    float inputs:opacity.connect = </Root/amongus_1/Materials/monito02/tex_base.outputs:a>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/monito02/uvset0.outputs:result>
-                }
-            }
-
-            over "motores"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/motores/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/motores/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/motores/uvset0.outputs:result>
-                }
-            }
-
-            over "pared_al"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/pared_al/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/pared_al/tex_base.outputs:rgb>
-                    float inputs:metallic.connect = </Root/amongus_1/Materials/pared_al/tex_metallic.outputs:r>
-                    float inputs:occlusion.connect = </Root/amongus_1/Materials/pared_al/tex_occlusion.outputs:r>
-                    float inputs:roughness.connect = </Root/amongus_1/Materials/pared_al/tex_roughness.outputs:r>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/pared_al/uvset0.outputs:result>
-                }
-
-                over "tex_metallic"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/pared_al/uvset0.outputs:result>
-                }
-
-                over "tex_roughness"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/pared_al/uvset0.outputs:result>
-                }
-
-                over "tex_occlusion"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/pared_al/uvset0.outputs:result>
-                }
-            }
-
-            over "pared_ca"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/pared_ca/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/pared_ca/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/pared_ca/uvset0.outputs:result>
-                }
-            }
-
-            over "pared_es"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/pared_es/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/pared_es/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/pared_es/uvset0.outputs:result>
-                }
-            }
-
-            over "paredes"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/paredes/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/paredes/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/paredes/uvset0.outputs:result>
-                }
-            }
-
-            over "piso_com"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/piso_com/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/piso_com/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/piso_com/uvset0.outputs:result>
-                }
-            }
-
-            over "piso_pas"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/piso_pas/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/piso_pas/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/piso_pas/uvset0.outputs:result>
-                }
-            }
-
-            over "piso_p01"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/piso_p01/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/piso_p01/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/piso_p01/uvset0.outputs:result>
-                }
-            }
-
-            over "piso_tex"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/piso_tex/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/piso_tex/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/piso_tex/uvset0.outputs:result>
-                }
-            }
-
-            over "piso_t04"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/piso_t04/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/piso_t04/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/piso_t04/uvset0.outputs:result>
-                }
-            }
-
-            over "piso_t03"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/piso_t03/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/piso_t03/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/piso_t03/uvset0.outputs:result>
-                }
-            }
-
-            over "piso_t01"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/piso_t01/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/piso_t01/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/piso_t01/uvset0.outputs:result>
-                }
-            }
-
-            over "piso_t02"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/piso_t02/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/piso_t02/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/piso_t02/uvset0.outputs:result>
-                }
-            }
-
-            over "reactor"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/reactor/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/reactor/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/reactor/uvset0.outputs:result>
-                }
-            }
-
-            over "separado"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/separado/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/separado/tex_base.outputs:rgb>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/separado/uvset0.outputs:result>
-                }
-            }
-
-            over "textura"
-            {
-                token outputs:surface.connect = </Root/amongus_1/Materials/textura/pbr_shader.outputs:surface>
-
-                over "pbr_shader"
-                {
-                    color3f inputs:diffuseColor.connect = </Root/amongus_1/Materials/textura/tex_base.outputs:rgb>
-                    float inputs:opacity.connect = </Root/amongus_1/Materials/textura/tex_base.outputs:a>
-                }
-
-                over "tex_base"
-                {
-                    float2 inputs:st.connect = </Root/amongus_1/Materials/textura/uvset0.outputs:result>
                 }
             }
         }
@@ -7347,6 +6331,594 @@ def Xform "Root"
                             }
                         }
                     }
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
+    def "hooptest_4" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        float3 xformOp:scale = (2.5, 2.5, 2.5)
+        float3 xformOp:translate = (-0.15295288, 0.2362597, -1.1705272)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_4/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
+    def "hooptest_65" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        reorder nameChildren = ["hoop", "Collider"]
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (5.791805, 5.791805, 5.791805)
+        float3 xformOp:translate = (-1.2963831, 0.71650374, -0.86541283)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            reorder nameChildren = ["Materials", "Meshes", "ImageBasedLight"]
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_65/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+
+                    over "pbr_shader"
+                    {
+                        color3f inputs:diffuseColor = (1, 0.019096047, 0) (
+                            colorSpace = "srgb_displayp3"
+                        )
+                    }
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
+    def "hooptest_66" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        reorder nameChildren = ["hoop", "Collider"]
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (5.791805, 5.791805, 5.791805)
+        float3 xformOp:translate = (-2.2563462, 0.71650374, -0.07556903)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            reorder nameChildren = ["Materials", "Meshes", "ImageBasedLight"]
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_66/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+
+                    over "pbr_shader"
+                    {
+                        color3f inputs:diffuseColor = (1, 0.5949365, 0.0037570577) (
+                            colorSpace = "srgb_displayp3"
+                        )
+                    }
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
+    def "hooptest_67" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        reorder nameChildren = ["hoop", "Collider"]
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (5.791805, 5.791805, 5.791805)
+        float3 xformOp:translate = (-3.3572583, 0.71650374, -0.07556903)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            reorder nameChildren = ["Materials", "Meshes", "ImageBasedLight"]
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_67/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+
+                    over "pbr_shader"
+                    {
+                        color3f inputs:diffuseColor = (0.9215337, 1, 0) (
+                            colorSpace = "srgb_displayp3"
+                        )
+                    }
+                }
+            }
+
+            over "ImageBasedLight"
+            {
+                bool isGlobalIBL = 0
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
+    def "hooptest_68" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        reorder nameChildren = ["hoop", "Collider"]
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (5.791805, 5.791805, 5.791805)
+        float3 xformOp:translate = (-0.9106144, 0.71650374, 1.0452195)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            reorder nameChildren = ["Materials", "Meshes", "ImageBasedLight"]
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_68/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+
+                    over "pbr_shader"
+                    {
+                        color3f inputs:diffuseColor = (0.23164496, 1, 0) (
+                            colorSpace = "srgb_displayp3"
+                        )
+                    }
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
+    def "hooptest_69" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        reorder nameChildren = ["hoop", "Collider"]
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (5.791805, 5.791805, 5.791805)
+        float3 xformOp:translate = (-0.553288, 0.71650374, 1.6086562)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            reorder nameChildren = ["Materials", "Meshes", "ImageBasedLight"]
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_69/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+
+                    over "pbr_shader"
+                    {
+                        color3f inputs:diffuseColor = (0, 0.84699094, 1) (
+                            colorSpace = "srgb_displayp3"
+                        )
+                    }
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
+    def "hooptest_70" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        reorder nameChildren = ["hoop", "Collider"]
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (5.791805, 5.791805, 5.791805)
+        float3 xformOp:translate = (1.3538738, 0.71650374, 1.5018187)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            reorder nameChildren = ["Materials", "Meshes", "ImageBasedLight"]
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_70/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+
+                    over "pbr_shader"
+                    {
+                        color3f inputs:diffuseColor = (0, 0.30374205, 1) (
+                            colorSpace = "srgb_displayp3"
+                        )
+                    }
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
+    def "hooptest_71" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        reorder nameChildren = ["hoop", "Collider"]
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (5.791805, 5.791805, 5.791805)
+        float3 xformOp:translate = (3.4318986, 0.71650374, -0.16740799)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            reorder nameChildren = ["Materials", "Meshes", "ImageBasedLight"]
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_71/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+
+                    over "pbr_shader"
+                    {
+                        color3f inputs:diffuseColor = (0.67174745, 0, 1) (
+                            colorSpace = "srgb_displayp3"
+                        )
+                    }
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
+    def "hooptest_72" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        reorder nameChildren = ["hoop", "Collider"]
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (5.791805, 5.791805, 5.791805)
+        float3 xformOp:translate = (1.8770856, 0.71650374, -0.4323435)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            reorder nameChildren = ["Materials", "Meshes", "ImageBasedLight"]
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_72/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+
+                    over "pbr_shader"
+                    {
+                        color3f inputs:diffuseColor = (1, 0, 0.75) (
+                            colorSpace = "srgb_displayp3"
+                        )
+                    }
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
+    def "hooptest_73" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        reorder nameChildren = ["hoop", "Collider"]
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (5.791805, 5.791805, 5.791805)
+        float3 xformOp:translate = (1.2252752, 0.71650374, -1.2943022)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            reorder nameChildren = ["Materials", "Meshes", "ImageBasedLight"]
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_73/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+
+                    over "pbr_shader"
+                    {
+                        color3f inputs:diffuseColor = (0.27484274, 0.6150934, 0.28506944) (
+                            colorSpace = "srgb_displayp3"
+                        )
+                    }
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
+    def "hooptest_74" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        reorder nameChildren = ["hoop", "Collider"]
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (5.791805, 5.791805, 5.791805)
+        float3 xformOp:translate = (0.71233416, 0.71650374, 0.2225334)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            reorder nameChildren = ["Materials", "Meshes", "ImageBasedLight"]
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_74/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
+
+                    over "pbr_shader"
+                    {
+                        color3f inputs:diffuseColor = (0.5807225, 0.06673408, 0) (
+                            colorSpace = "srgb_texture"
+                        )
+                    }
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.026572675, 0.0029897531, 0.026586326)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.000013662968, 0.005, 0)
+                }
+            }
+        }
+    }
+
+    def "hooptest_75" (
+        active = true
+        references = @hooptest.usda@
+    )
+    {
+        reorder nameChildren = ["hoop", "Collider"]
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (5.791805, 5.791805, 5.791805)
+        float3 xformOp:translate = (0.2620977, 0.71650374, -0.8550954)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "hoop"
+        {
+            reorder nameChildren = ["Materials", "Meshes", "ImageBasedLight"]
+            over "Materials"
+            {
+                over "iayseozdemir_hoop_piercing"
+                {
+                    token outputs:surface.connect = </Root/hooptest_75/hoop/Materials/iayseozdemir_hoop_piercing/pbr_shader.outputs:surface>
                 }
             }
         }
