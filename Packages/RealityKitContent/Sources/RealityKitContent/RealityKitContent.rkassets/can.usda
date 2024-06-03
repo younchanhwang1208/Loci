@@ -1,0 +1,102 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (409.100.15)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    def "Tuna_Can" (
+        active = true
+        prepend references = @Tuna_Can.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.001, 0.001, 0.001)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Tuna_Can_1" (
+        active = true
+        prepend references = @Tuna_Can.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.001, 0.001, 0.001)
+        float3 xformOp:translate = (-0.1, 0.3, 0.05)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Materials"
+        {
+            over "material"
+            {
+                token outputs:surface.connect = </Root/Tuna_Can_1/Materials/material/pbr_shader.outputs:surface>
+
+                over "pbr_shader"
+                {
+                    color3f inputs:diffuseColor.connect = </Root/Tuna_Can_1/Materials/material/tex_base.outputs:rgb>
+                    float inputs:metallic.connect = </Root/Tuna_Can_1/Materials/material/tex_metallic.outputs:r>
+                    normal3f inputs:normal.connect = </Root/Tuna_Can_1/Materials/material/tex_normal.outputs:rgb>
+                    float inputs:roughness.connect = </Root/Tuna_Can_1/Materials/material/tex_roughness.outputs:r>
+                }
+
+                over "tex_base"
+                {
+                    float2 inputs:st.connect = </Root/Tuna_Can_1/Materials/material/uvset0.outputs:result>
+                }
+
+                over "tex_metallic"
+                {
+                    float2 inputs:st.connect = </Root/Tuna_Can_1/Materials/material/uvset0.outputs:result>
+                }
+
+                over "tex_roughness"
+                {
+                    float2 inputs:st.connect = </Root/Tuna_Can_1/Materials/material/uvset0.outputs:result>
+                }
+
+                over "tex_normal"
+                {
+                    float2 inputs:st.connect = </Root/Tuna_Can_1/Materials/material/uvset0.outputs:result>
+                }
+            }
+
+            over "tuna_can"
+            {
+                token outputs:surface.connect = </Root/Tuna_Can_1/Materials/tuna_can/pbr_shader.outputs:surface>
+
+                over "pbr_shader"
+                {
+                    color3f inputs:diffuseColor.connect = </Root/Tuna_Can_1/Materials/tuna_can/tex_base.outputs:rgb>
+                    float inputs:metallic.connect = </Root/Tuna_Can_1/Materials/tuna_can/tex_metallic.outputs:r>
+                    normal3f inputs:normal.connect = </Root/Tuna_Can_1/Materials/tuna_can/tex_normal.outputs:rgb>
+                    float inputs:roughness.connect = </Root/Tuna_Can_1/Materials/tuna_can/tex_roughness.outputs:r>
+                }
+
+                over "tex_base"
+                {
+                    float2 inputs:st.connect = </Root/Tuna_Can_1/Materials/tuna_can/uvset0.outputs:result>
+                }
+
+                over "tex_metallic"
+                {
+                    float2 inputs:st.connect = </Root/Tuna_Can_1/Materials/tuna_can/uvset0.outputs:result>
+                }
+
+                over "tex_roughness"
+                {
+                    float2 inputs:st.connect = </Root/Tuna_Can_1/Materials/tuna_can/uvset0.outputs:result>
+                }
+
+                over "tex_normal"
+                {
+                    float2 inputs:st.connect = </Root/Tuna_Can_1/Materials/tuna_can/uvset0.outputs:result>
+                }
+            }
+        }
+    }
+}
+
