@@ -1,23 +1,3 @@
-#usda 1.0
-(
-    customLayerData = {
-        string creator = "Reality Composer Pro Version 1.0 (409.100.15)"
-    }
-    defaultPrim = "Root"
-    metersPerUnit = 1
-    upAxis = "Y"
-)
-
-def Xform "Root"
-{
-    def "Thumb_Thumbs___Spy_Kids" (
-        active = true
-        prepend references = @Thumb_Thumbs_-_Spy_Kids.usdz@
-    )
-    {
-        float3 xformOp:scale = (0.001, 0.001, 0.001)
-        float3 xformOp:translate = (0.005014688, 0, -0.02615431)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-    }
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:d842cb936110dc0738bd403c0e4134fd15b406b1b76a2504103752bbffdf365d
+size 554

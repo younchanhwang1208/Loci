@@ -1,23 +1,3 @@
-#usda 1.0
-(
-    customLayerData = {
-        string creator = "Reality Composer Pro Version 1.0 (409.100.15)"
-    }
-    defaultPrim = "Root"
-    metersPerUnit = 1
-    upAxis = "Y"
-)
-
-def Xform "Root"
-{
-    def "Cartoon_Car" (
-        active = true
-        prepend references = @Cartoon_Car.usdz@
-    )
-    {
-        float3 xformOp:scale = (0.001, 0.001, 0.001)
-        float3 xformOp:translate = (0, 0, 0)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-    }
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:8544456d8ad68c8fea8e69568d48ef92602a95a0749f986707b0fd748c0fefa6
+size 510

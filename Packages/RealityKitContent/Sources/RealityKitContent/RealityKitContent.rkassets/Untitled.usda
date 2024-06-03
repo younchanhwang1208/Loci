@@ -1,30 +1,3 @@
-#usda 1.0
-(
-    defaultPrim = "Root"
-    metersPerUnit = 1
-    upAxis = "Y"
-)
-
-def Xform "Root"
-{
-    def "Pony_luna" (
-        active = true
-        prepend references = @Pony_luna.usdz@
-    )
-    {
-        float3 xformOp:scale = (0.001, 0.001, 0.001)
-        float3 xformOp:translate = (0, 0.20636849, 0)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-    }
-
-    def "Glass_of_water" (
-        active = true
-        prepend references = @Glass_of_water.usdz@
-    )
-    {
-        float3 xformOp:scale = (0.001, 0.001, 0.001)
-        float3 xformOp:translate = (0, 0, 0)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-    }
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:5e829c29ad7bdc7e6ab9830bb124e57929448ec40f184fd20341d4df34655c35
+size 725

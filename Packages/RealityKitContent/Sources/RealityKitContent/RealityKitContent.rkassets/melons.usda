@@ -1,33 +1,3 @@
-#usda 1.0
-(
-    customLayerData = {
-        string creator = "Reality Composer Pro Version 1.0 (409.100.15)"
-    }
-    defaultPrim = "Root"
-    metersPerUnit = 1
-    upAxis = "Y"
-)
-
-def Xform "Root"
-{
-    def "Melon_pack" (
-        active = true
-        prepend references = @Melon_pack.usdz@
-    )
-    {
-        float3 xformOp:scale = (0.001, 0.001, 0.001)
-        float3 xformOp:translate = (-0.01032088, 0, 0.10507813)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-    }
-
-    def "Wedding_Cake" (
-        active = true
-        prepend references = @Wedding_Cake.usdz@
-    )
-    {
-        float3 xformOp:scale = (0.002, 0.002, 0.002)
-        float3 xformOp:translate = (-0.04, 0, -0.2)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-    }
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:565fe80695b506285be3557e2d086050699228bcac71297fcdd9fc0fa9f8e806
+size 843

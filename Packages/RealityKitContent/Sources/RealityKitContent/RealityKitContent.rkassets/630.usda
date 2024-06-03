@@ -1,27 +1,3 @@
-#usda 1.0
-(
-    customLayerData = {
-        string creator = "Reality Composer Pro Version 1.0 (409.100.15)"
-    }
-    defaultPrim = "Root"
-    metersPerUnit = 1
-    upAxis = "Y"
-)
-
-def Xform "Root"
-{
-    def "Hand_monster" (
-        active = true
-        customData = {
-            float3 rotationEulerHint = (-2.0943952, 0, 0)
-        }
-        prepend references = @Hand_monster.usdz@
-    )
-    {
-        quatf xformOp:orient = (-0.49999997, 0.8660254, 0, 0)
-        float3 xformOp:scale = (0.001, 0.001, 0.001)
-        float3 xformOp:translate = (0, 0.08, 0)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-    }
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:8dfaf9546ae733420cd82ce78846e8dd6bb3de967ae51f198e4c0e85c3154ac8
+size 668
