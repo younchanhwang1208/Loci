@@ -112,7 +112,39 @@
       [
         "08D44A6E-77EE-480B-B188-7664871F26B5",
         "Root",
+        "_630",
+        "Hand_monster",
+        "Materials"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "08D44A6E-77EE-480B-B188-7664871F26B5",
+        "Root",
         "test_banana"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "08D44A6E-77EE-480B-B188-7664871F26B5",
+        "Root",
+        "melons",
+        "Wedding_Cake",
+        "Meshes"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "08D44A6E-77EE-480B-B188-7664871F26B5",
+        "Root",
+        "melons",
+        "Melon_pack"
       ],
       {
         "isExpanded" : true,
@@ -130,7 +162,169 @@
       },
       [
         "08D44A6E-77EE-480B-B188-7664871F26B5",
+        "Root",
+        "justice",
+        "Ice_sword"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "08D44A6E-77EE-480B-B188-7664871F26B5",
+        "Root",
+        "_630"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "08D44A6E-77EE-480B-B188-7664871F26B5",
         "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "08D44A6E-77EE-480B-B188-7664871F26B5",
+        "Root",
+        "melons",
+        "Wedding_Cake",
+        "Materials"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "08D44A6E-77EE-480B-B188-7664871F26B5",
+        "Root",
+        "_630",
+        "Hand_monster",
+        "Meshes",
+        "Sketchfab_model"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "08D44A6E-77EE-480B-B188-7664871F26B5",
+        "Root",
+        "melons",
+        "Melon_pack",
+        "Materials"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "08D44A6E-77EE-480B-B188-7664871F26B5",
+        "Root",
+        "melons"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "08D44A6E-77EE-480B-B188-7664871F26B5",
+        "Root",
+        "justice"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "08D44A6E-77EE-480B-B188-7664871F26B5",
+        "Root",
+        "melons",
+        "Melon_pack",
+        "Meshes",
+        "Sketchfab_model",
+        "__melons_fbx"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "08D44A6E-77EE-480B-B188-7664871F26B5",
+        "Root",
+        "_630",
+        "Hand_monster",
+        "Meshes"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "08D44A6E-77EE-480B-B188-7664871F26B5",
+        "Root",
+        "_630",
+        "Hand_monster",
+        "Meshes",
+        "Sketchfab_model",
+        "_c05c5a1bfcc44f79370f88d62ff35a6_fbx"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "08D44A6E-77EE-480B-B188-7664871F26B5",
+        "Root",
+        "_630",
+        "Hand_monster"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "08D44A6E-77EE-480B-B188-7664871F26B5",
+        "Root",
+        "melons",
+        "Melon_pack",
+        "Meshes"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "08D44A6E-77EE-480B-B188-7664871F26B5",
+        "Root",
+        "justice",
+        "Ice_sword",
+        "Materials"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "08D44A6E-77EE-480B-B188-7664871F26B5",
+        "Root",
+        "melons",
+        "Melon_pack",
+        "Meshes",
+        "Sketchfab_model"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "08D44A6E-77EE-480B-B188-7664871F26B5",
+        "Root",
+        "melons",
+        "Wedding_Cake"
       ],
       {
         "isExpanded" : true,
@@ -451,14 +645,6 @@
       },
       [
         "A77E8D0C-3D8F-490E-AA8C-7C57C5CCCC4A",
-        "Root"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "A77E8D0C-3D8F-490E-AA8C-7C57C5CCCC4A",
         "Root",
         "hoop",
         "Materials"
@@ -472,6 +658,14 @@
         "Root",
         "hoop",
         "Meshes"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A77E8D0C-3D8F-490E-AA8C-7C57C5CCCC4A",
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -496,15 +690,6 @@
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root",
-        "Sphere_Right"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "AF09ED6F-1707-48FD-8720-65B998362C09",
-        "Root",
         "Sphere_Left"
       ],
       {
@@ -514,6 +699,15 @@
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root",
+        "Sphere_Right"
       ],
       {
         "isExpanded" : true,
@@ -609,8 +803,7 @@
     "objectMetadataList" : [
       [
         "CB766F92-EE55-4A63-9401-E7B8C009764D",
-        "Root",
-        "GridMaterial"
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -618,7 +811,8 @@
       },
       [
         "CB766F92-EE55-4A63-9401-E7B8C009764D",
-        "Root"
+        "Root",
+        "GridMaterial"
       ],
       {
         "isExpanded" : true,
@@ -631,8 +825,30 @@
       [
         "CD11C75A-51EC-49FE-9A95-B92389BD0ABF",
         "Root",
-        "wingstest_1",
+        "wingstest",
         "wings"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "CD11C75A-51EC-49FE-9A95-B92389BD0ABF",
+        "Root",
+        "wingstest_1",
+        "wings",
+        "Materials"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "CD11C75A-51EC-49FE-9A95-B92389BD0ABF",
+        "Root",
+        "wingstest",
+        "wings",
+        "Materials"
       ],
       {
         "isExpanded" : true,
@@ -649,30 +865,8 @@
       [
         "CD11C75A-51EC-49FE-9A95-B92389BD0ABF",
         "Root",
-        "wingstest",
-        "wings"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "CD11C75A-51EC-49FE-9A95-B92389BD0ABF",
-        "Root",
         "wingstest_1",
-        "wings",
-        "Materials"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "CD11C75A-51EC-49FE-9A95-B92389BD0ABF",
-        "Root",
-        "wingstest",
-        "wings",
-        "Materials"
+        "wings"
       ],
       {
         "isExpanded" : true,
@@ -689,7 +883,9 @@
     "objectMetadataList" : [
       [
         "D66134B1-3681-4A8E-AFE5-29F257229F3B",
-        "Root"
+        "Root",
+        "GridMaterial",
+        "GridMaterial"
       ],
       {
         "isExpanded" : true,
@@ -697,9 +893,7 @@
       },
       [
         "D66134B1-3681-4A8E-AFE5-29F257229F3B",
-        "Root",
-        "GridMaterial",
-        "GridMaterial"
+        "Root"
       ],
       {
         "isExpanded" : true,
